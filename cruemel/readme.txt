@@ -1,4 +1,2 @@
-new directory by christopher
-
-# a comment added by loris
+# branch directory for christopher
 
