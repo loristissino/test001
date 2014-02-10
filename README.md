@@ -9,5 +9,6 @@ A test repository to make some experiments of coordination
 - css: boilerplate, main & normalize.css
 - doc: boilerplate, documentation
 - img: custom images
+- johann: stuff by johann
 - js: boilerplate, main & plugins.js
 - loris: stuff by loris
