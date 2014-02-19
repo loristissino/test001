@@ -30,41 +30,42 @@
 			<h1>The true speed of a car</h1>
 			<div id="part_01" class="card">
 				<h2>Startpage</h2>
-				<p>The speed of Mario's car is [!OUT!] km/h. And what is your car's?</p>
+				<p>The speed of [! <code>name</code> !]'s car is [! OUT !] km/h. And what is your car's?</p>
 				<button>Caluclate your own speed</button>
 			</div>
 			
 			<div id="part_02" class="card">
-				<h2>Options</h2>
-				<p>Mario uses his own car to get to work.</p>
+				<h2>Input</h2>
+				<p>[? <code>name</code> ?] uses his [? <code>transport.vehicle</code> ?] to get to work.</p>
 
 				<h3>Way</h3>
 				
-				<p>Between leaving home and reaching his workplace [?IN?] minutes pass. The ride is [?IN?] kilometers. [*]</p>
-				
-				<p>He will drive the route [?IN?] times a day, for [?IN?] days per week, for [?IN?] weeks in a year.</p>
+				<p>Between leaving home and reaching his workplace [? <code>way.duration</code> ?] minutes pass. The ride is [? <code>way.distance</code> ?] kilometers. [*]</p>
 				
 				<h3>Expenses</h3>
 
-				<p>For a more significant computation, however, we must also consider the cost of the car. In one year Mario spends:</p>
+				<p>For a more significant computation, however, we must also consider the cost of the car. In one year [? <code>gender.salutatory</code> ?] spends:</p>
 
 				<ul>
-					<li>car insurance: &euro; [?IN?]
-					<li>ownership tax: &euro; [?IN?]
-					<li>expenses for maintenance: &euro; [?IN?]
-					<li>other expenses (tolls, parking, etc..): &euro; [?IN?]
+					<li>insurance: &euro; [? <code>transport.insurance</code> ?]
+					<li>tax: &euro; [? <code>transport.tax</code> ?]
+					<li>maintenance: &euro; [? <code>transport.maintenance</code> ?]
+					<li>other expenses (tolls, parking, etc..): &euro; [? <code>transport.other</code> ?]
 				</ul>
 
-				<p>The car was purchased for &euro; [?IN?]. Mario expects to be able to use it [?IN?] years.</p>
+				<p>The car was purchased for &euro; [? <code>transport.price</code> ?]. [? <code>name</code> ?] expects to be able to use it [? <code>transport.years</code> ?] years.</p>
 				
-				<p>One liter of fuel costs &euro; [?IN?], and his car consumes [?IN?] liter per km</p>
+				<p>(new:) The car is used for [? <code>transport.usage</code> ?] % private purposes.</p>
+				
+				<p>One liter of fuel costs &euro; [? <code>prices.fuel</code> ?], and his car consumes [? <code>transport.consumption</code> ?] liter per 100 km</p>
 				
 				<h3>Time</h3>
 				
-				<p>Mario has a monthly salary of &euro; [?IN?], for [?IN?] hours of work.</p>
-
+				<p>[? <code>name</code> ?]  will drive the route to work [? <code>way.times</code> ?] times a day.</p>
 				
+				<p>[? <code>gender.salutatory</code> ?] works [? <code>work.hours</code> ?] a day, [? <code>work.days</code> ?] days a week and [? <code>work.weeks</code> ?] weeks in a year.</p>
 				
+				<p>[? <code>gender.salutatory</code> ?] has a monthly salary of &euro; [? <code>work.salary</code> ?].</p>
 				
 			</div>
 
@@ -72,21 +73,21 @@
 				<h2>Calculation</h2>
 				<h3>Way</h3>
 				
-				<p>The total path of his way to the workplace is [!OUT!] km per year [*].</p>
+				<p>The total path of his way to the workplace is [! OUT !] km per year [*].</p>
 				
-				<p>We can calculate the <em>door-to-door</em> speed of in a very simple way, with the classic <em>space / time</em> formula: it is [!OUT!] km/h. [*]</p>
+				<p>We can calculate the <em>door-to-door</em> speed of in a very simple way, with the classic <em>space / time</em> formula: it is [! OUT !] km/h. [*]</p>
 				
 				<h3>Expenses</h3>
 				
-				<p>Mario spends &euro; [!OUT!] per year for his car.</p>
+				<p>Mario spends &euro; [! OUT !] per year for his car.</p>
 				
-				<p>He also spends &euro; [!OUT!] each year in fuel. But the real costs [*] of car use are &euro; [!OUT!].</p>
+				<p>He also spends &euro; [! OUT !] each year in fuel. But the real costs  of car use are &euro; [! OUT !]. [*]</p>
 				
 				<h3>Time</h3>
 
-				<p>What do costs have to do with the speed? To earn &euro; [!OUT!], Mario has to work for [!OUT!] hours.</p>
+				<p>What do costs have to do with the speed? To earn &euro; [! OUT !], Mario has to work for [! OUT !] hours.</p>
 				
-				<p>Within a year, how much time does Mario spend to travel by car for his [!OUT!] km?. We have to take into consideration not only the [!OUT!] hours he spends on driving (or walking), but also the time he worked to afford the car. In total, it is therefore [!OUT!] hours.</p>
+				<p>Within a year, how much time does Mario spend to travel by car for his [! OUT !] km?. We have to take into consideration not only the [! OUT !] hours he spends on driving (or walking), but also the time he worked to afford the car. In total, it is therefore [! OUT !] hours.</p>
 
 			</div>
 			
@@ -95,13 +96,13 @@
 			
 				<dl>
 					<dt>Car:</dt>
-					<dd>The generalized velocity is: [!OUT!] km/h [!OUT!], ie. [!OUT!] km/h. [*]</dd>
+					<dd>The generalized velocity is: [! OUT!] km / [! OUT !] h, ie. [! OUT !] km/h. [*]</dd>
 				
 					<dt>Walking:</dt>
 					<dd>A person walking has a speed of 6 km/h.</dd>
 				
 					<dt>Cycling:</dt>
-					<dd>Keep in mind that you can easily travel by bicycle at 20 km/h. [*])</dd>
+					<dd>Keep in mind that you can easily travel by bicycle at 20 km/h. [*]</dd>
 				</dl>
 			</div>
 			
