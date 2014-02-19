@@ -30,13 +30,13 @@
 			<h1>The true speed of a car</h1>
 			<div id="part_01" class="card">
 				<h2>Startpage</h2>
-				<p>The speed of %[ <code>in.name</code> ]%'s car is %[out.total.speed]% km/h. And what is your car's?</p>
+				<p>The speed of %[ <code>in.person.name</code> ]%'s car is %[out.total.speed]% km/h. And what is your car's?</p>
 				<button>Caluclate your own speed</button>
 			</div>
 			
 			<div id="part_02" class="card">
 				<h2>Input</h2>
-				<p>%[ <code>in.name</code> ]% uses a %[ <code>in.transport.vehicle</code> ]% to get to work.</p>
+				<p>%[ <code>in.person.name</code> ]% uses a %[ <code>in.transport.vehicle</code> ]% to get to work.</p>
 
 				<h3>Way</h3>
 				
@@ -44,28 +44,28 @@
 				
 				<h3>Expenses</h3>
 
-				<p>For a more significant computation, however, we must also consider the cost of the %[ <code>in.transport.vehicle</code> ]%. In one year %[in.name]% spends:</p>
+				<p>For a more significant computation, however, we must also consider the cost of the %[ <code>in.transport.vehicle</code> ]%. In one year %[in.person.name]% spends:</p>
 
 				<ul>
-					<li>insurance: &euro; %[ <code>in.transport.insurance</code> ]%
-					<li>tax: &euro; %[ <code>in.transport.tax</code> ]%
-					<li>maintenance: &euro; %[ <code>in.transport.maintenance</code> ]%
-					<li>other expenses (tolls, parking, etc..): &euro; %[ <code>transport.other</code> ]%
+					<li>insurance: &euro; %[ <code>in.expenses.insurance</code> ]%
+					<li>tax: &euro; %[ <code>in.expenses.tax</code> ]%
+					<li>maintenance: &euro; %[ <code>in.expenses.maintenance</code> ]%
+					<li>other expenses (tolls, parking, etc..): &euro; %[ <code>in.expenses.other</code> ]%
 				</ul>
 
-				<p>The %[ <code>in.transport.vehicle</code> ]% was purchased for &euro; %[ <code>in.transport.price</code> ]%. %[ <code>in.name</code> ]% expects to be able to use it %[ <code>in.transport.years</code> ]% years.</p>
+				<p>The %[ <code>in.transport.vehicle</code> ]% was purchased for &euro; %[ <code>in.transport.price</code> ]%. %[ <code>in.person.name</code> ]% expects to be able to use it %[ <code>in.transport.years</code> ]% years.</p>
 				
 				<p>(new: The car is used for %[ <code>in.transport.usage</code> ]% % private purposes.)</p>
 				
-				<p>One liter of fuel costs &euro; %[ <code>in.prices.fuel</code> ]%, and the %[ <code>in.transport.vehicle</code> ]% consumes %[ <code>in.transport.consumption</code> ]% liter per 100 km</p>
+				<p>One liter of fuel costs &euro; %[ <code>in.expenses.fuel</code> ]%, and the %[ <code>in.transport.vehicle</code> ]% consumes %[ <code>in.transport.consumption</code> ]% liter per 100 km.</p>
 				
 				<h3>Time</h3>
 				
-				<p>%[ <code>in.name</code> ]%  will drive the route to work %[ <code>in.way.times</code> ]% times a day.</p>
+				<p>%[ <code>in.person.name</code> ]%  will drive the route to work %[ <code>in.way.times</code> ]% times a day.</p>
 				
-				<p>%[ <code>in.gender.salutatory</code> ]% works %[ <code>in.work.hours</code> ]% a day, %[ <code>in.work.days</code> ]% days a week and %[ <code>in.work.weeks</code> ]% weeks in a year.</p>
+				<p>%[ <code>in.person.salutatory</code> ]% works %[ <code>in.work.hours</code> ]% a day, %[ <code>in.work.days</code> ]% days a week and %[ <code>in.work.weeks</code> ]% weeks in a year.</p>
 				
-				<p>%[ <code>in.name</code> ]% has a monthly salary of &euro; %[ <code>in.work.salary</code> ]%.</p>
+				<p>%[ <code>in.person.name</code> ]% has a monthly salary of &euro; %[ <code>in.work.salary</code> ]%.</p>
 				
 			</div>
 
@@ -73,20 +73,23 @@
 				<h2>Calculation</h2>
 				<h3>Way</h3>
 				
-				<p>The total path of %[ <code>in.gender.label</code> ]% way to the workplace is %[out.total.way]% km per year [*].</p>
+				<p>The total path of %[ <code>in.person.label</code> ]% way to the workplace is %[out.total.way]% km per year [*].</p>
 				
 				<p>(?:<del><em>door-to-door</em> speed</del>)</p>
 				
 				<h3>Expenses</h3>
 				
-				<p>%[ <code>in.name</code> ]% spends &euro; %[out.expenses.vehicle]% per year for %[ <code>in.gender.label</code> ]% %[ <code>in.transport.vehicle</code> ]%. %[ <code>in.gender.salutatory</code> ]% also spends &euro; %[out.expenses.fuel]% each year in fuel.</p>
+				<p>%[ <code>in.person.name</code> ]% spends &euro; %[out.expenses.vehicle]% per year for %[ <code>in.person.label</code> ]% %[ <code>in.transport.vehicle</code> ]%. %[ <code>in.person.salutatory</code> ]% also spends &euro; %[out.expenses.fuel]% each year in fuel.</p>
 				
 				<p>But the real costs of the %[ <code>in.transport.vehicle</code> ]% use are &euro; %[out.total.expenses]%. [*]</p>
 				
 				<h3>Time</h3>
 
-				<p>What do costs have to do with the speed? Within a year, how much time does %[ <code>in.name</code> ]% spend to travel by %[ <code>in.transport.vehicle</code> ]%?</p>
-				<p>We have to take into consideration not only the %[out.time.way]% hours %[ <code>in.gender.salutatory</code> ]% spends on driving, but also the time %[ <code>in.name</code> ]% worked to afford the %[ <code>in.transport.vehicle</code> ]%: %[out.time.work]%. In total, it is therefore %[out.total.time]% hours.</p>
+				<p>What do costs have to do with the speed? Within a year, how much time does %[ <code>in.person.name</code> ]% spend to travel by %[ <code>in.transport.vehicle</code> ]%?</p>
+				
+				<p>We have to take into consideration not only the %[out.time.way]% hours %[ <code>in.person.salutatory</code> ]% spends on driving, but also the time %[ <code>in.person.salutatory</code> ]% worked to afford the %[ <code>in.transport.vehicle</code> ]%: %[out.time.expenses]%.</p>
+				
+				<p>In total, it is therefore %[out.total.time]% hours.</p>
 				
 			</div>
 			
