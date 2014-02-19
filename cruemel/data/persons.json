@@ -1,0 +1,40 @@
+{
+  "persons": [
+    {
+      "name": "mario",
+       "transport": [
+      	{
+      		"vehicle": "car",
+      		"consumption": 5,
+      		"insurance": 400,
+      		"tax": 200,
+      		"maintenance": 500,
+      		"other": 0,
+      		"price": 20000,
+      		"use in years": 5,
+      		"private usage": 50
+      	}
+      ],
+      "prices": [
+      	{
+      		"oil": 1.5
+      	}
+      ],
+      "way": [
+      	{
+      		"distance": 20,
+      		"duration": 30,
+      		"times": 2
+      	}
+      ],
+      "work": [
+      	{
+      		"weeks": 42,
+      		"days": 4,
+      		"hours": 8,
+      		"salary": 3000
+      	}
+      ]
+    }
+  ]
+}
