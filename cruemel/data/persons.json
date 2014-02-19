@@ -4,6 +4,7 @@
       "name": "mario",
       "gender": [
       	{
+      		"label": "his",
       		"salutatory": "he"
       	}
       ],

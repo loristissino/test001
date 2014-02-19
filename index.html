@@ -30,42 +30,42 @@
 			<h1>The true speed of a car</h1>
 			<div id="part_01" class="card">
 				<h2>Startpage</h2>
-				<p>The speed of [! <code>name</code> !]'s car is [! OUT !] km/h. And what is your car's?</p>
+				<p>The speed of %[ <code>in.name</code> ]%'s car is %[out.total.speed]% km/h. And what is your car's?</p>
 				<button>Caluclate your own speed</button>
 			</div>
 			
 			<div id="part_02" class="card">
 				<h2>Input</h2>
-				<p>[? <code>name</code> ?] uses his [? <code>transport.vehicle</code> ?] to get to work.</p>
+				<p>%[ <code>in.name</code> ]% uses a %[ <code>in.transport.vehicle</code> ]% to get to work.</p>
 
 				<h3>Way</h3>
 				
-				<p>Between leaving home and reaching his workplace [? <code>way.duration</code> ?] minutes pass. The ride is [? <code>way.distance</code> ?] kilometers. [*]</p>
+				<p>Between leaving home and reaching the workplace %[ <code>in.way.duration</code> ]% minutes pass. The ride is %[ <code>in.way.distance</code> ]% kilometers. [*]</p>
 				
 				<h3>Expenses</h3>
 
-				<p>For a more significant computation, however, we must also consider the cost of the car. In one year [? <code>gender.salutatory</code> ?] spends:</p>
+				<p>For a more significant computation, however, we must also consider the cost of the %[ <code>in.transport.vehicle</code> ]%. In one year %[in.name]% spends:</p>
 
 				<ul>
-					<li>insurance: &euro; [? <code>transport.insurance</code> ?]
-					<li>tax: &euro; [? <code>transport.tax</code> ?]
-					<li>maintenance: &euro; [? <code>transport.maintenance</code> ?]
-					<li>other expenses (tolls, parking, etc..): &euro; [? <code>transport.other</code> ?]
+					<li>insurance: &euro; %[ <code>in.transport.insurance</code> ]%
+					<li>tax: &euro; %[ <code>in.transport.tax</code> ]%
+					<li>maintenance: &euro; %[ <code>in.transport.maintenance</code> ]%
+					<li>other expenses (tolls, parking, etc..): &euro; %[ <code>transport.other</code> ]%
 				</ul>
 
-				<p>The car was purchased for &euro; [? <code>transport.price</code> ?]. [? <code>name</code> ?] expects to be able to use it [? <code>transport.years</code> ?] years.</p>
+				<p>The %[ <code>in.transport.vehicle</code> ]% was purchased for &euro; %[ <code>in.transport.price</code> ]%. %[ <code>in.name</code> ]% expects to be able to use it %[ <code>in.transport.years</code> ]% years.</p>
 				
-				<p>(new:) The car is used for [? <code>transport.usage</code> ?] % private purposes.</p>
+				<p>(new: The car is used for %[ <code>in.transport.usage</code> ]% % private purposes.)</p>
 				
-				<p>One liter of fuel costs &euro; [? <code>prices.fuel</code> ?], and his car consumes [? <code>transport.consumption</code> ?] liter per 100 km</p>
+				<p>One liter of fuel costs &euro; %[ <code>in.prices.fuel</code> ]%, and the %[ <code>in.transport.vehicle</code> ]% consumes %[ <code>in.transport.consumption</code> ]% liter per 100 km</p>
 				
 				<h3>Time</h3>
 				
-				<p>[? <code>name</code> ?]  will drive the route to work [? <code>way.times</code> ?] times a day.</p>
+				<p>%[ <code>in.name</code> ]%  will drive the route to work %[ <code>in.way.times</code> ]% times a day.</p>
 				
-				<p>[? <code>gender.salutatory</code> ?] works [? <code>work.hours</code> ?] a day, [? <code>work.days</code> ?] days a week and [? <code>work.weeks</code> ?] weeks in a year.</p>
+				<p>%[ <code>in.gender.salutatory</code> ]% works %[ <code>in.work.hours</code> ]% a day, %[ <code>in.work.days</code> ]% days a week and %[ <code>in.work.weeks</code> ]% weeks in a year.</p>
 				
-				<p>[? <code>gender.salutatory</code> ?] has a monthly salary of &euro; [? <code>work.salary</code> ?].</p>
+				<p>%[ <code>in.name</code> ]% has a monthly salary of &euro; %[ <code>in.work.salary</code> ]%.</p>
 				
 			</div>
 
@@ -73,22 +73,21 @@
 				<h2>Calculation</h2>
 				<h3>Way</h3>
 				
-				<p>The total path of his way to the workplace is [! OUT !] km per year [*].</p>
+				<p>The total path of %[ <code>in.gender.label</code> ]% way to the workplace is %[out.total.way]% km per year [*].</p>
 				
-				<p>We can calculate the <em>door-to-door</em> speed of in a very simple way, with the classic <em>space / time</em> formula: it is [! OUT !] km/h. [*]</p>
+				<p>(?:<del><em>door-to-door</em> speed</del>)</p>
 				
 				<h3>Expenses</h3>
 				
-				<p>Mario spends &euro; [! OUT !] per year for his car.</p>
+				<p>%[ <code>in.name</code> ]% spends &euro; %[out.expenses.vehicle]% per year for %[ <code>in.gender.label</code> ]% %[ <code>in.transport.vehicle</code> ]%. %[ <code>in.gender.salutatory</code> ]% also spends &euro; %[out.expenses.fuel]% each year in fuel.</p>
 				
-				<p>He also spends &euro; [! OUT !] each year in fuel. But the real costs  of car use are &euro; [! OUT !]. [*]</p>
+				<p>But the real costs of the %[ <code>in.transport.vehicle</code> ]% use are &euro; %[out.total.expenses]%. [*]</p>
 				
 				<h3>Time</h3>
 
-				<p>What do costs have to do with the speed? To earn &euro; [! OUT !], Mario has to work for [! OUT !] hours.</p>
+				<p>What do costs have to do with the speed? Within a year, how much time does %[ <code>in.name</code> ]% spend to travel by %[ <code>in.transport.vehicle</code> ]%?</p>
+				<p>We have to take into consideration not only the %[out.time.way]% hours %[ <code>in.gender.salutatory</code> ]% spends on driving, but also the time %[ <code>in.name</code> ]% worked to afford the %[ <code>in.transport.vehicle</code> ]%: %[out.time.work]%. In total, it is therefore %[out.total.time]% hours.</p>
 				
-				<p>Within a year, how much time does Mario spend to travel by car for his [! OUT !] km?. We have to take into consideration not only the [! OUT !] hours he spends on driving (or walking), but also the time he worked to afford the car. In total, it is therefore [! OUT !] hours.</p>
-
 			</div>
 			
 			<div id="part_04" class="card">
@@ -96,7 +95,7 @@
 			
 				<dl>
 					<dt>Car:</dt>
-					<dd>The generalized velocity is: [! OUT!] km / [! OUT !] h, ie. [! OUT !] km/h. [*]</dd>
+					<dd>The generalized velocity is: %[out.total.way]% km / %[out.total.time]% h, ie. %[out.total.speed]% km/h. [*]</dd>
 				
 					<dt>Walking:</dt>
 					<dd>A person walking has a speed of 6 km/h.</dd>
