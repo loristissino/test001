@@ -28,17 +28,17 @@
         <!-- start content  -->
         <div id="content" class="container">
 			<h1>The true speed of a car</h1>
-			<div id="part_01" class="card">
+			<div id="start" class="card">
 				<h2>Startpage</h2>
-				<p>The speed of Mario's car is [! <code>OUT</code> !] km/h. And what is your car's?</p>
-				<button>Caluclate your own speed</button>
+				<p>The speed of <a href="./index.html#details">Mario</a> is [! <code>OUT</code> !] km/h. And what is yours ?</p>
+				<button onclick="location.href='./index.html#input'">Calculate your own speed</button>
 			</div>
 			
-			<div id="part_02" class="card">
+			<div id="input" class="card">
 				<h2>Input</h2>
 				<p>You use your [? <code>IN</code> ?]  to get to work.</p>
 				
-				<p class="proposal">(proposal: i would like to make the transport (and person) a value to choose too (so i changed "Mario" to "You") - christopher)</p>
+				<p class="proposal">(proposal: i would like to make the transport (and person) a value to choose too - christopher)</p>
 
 				<h3>Way</h3>
 				
@@ -72,9 +72,29 @@
 			<p class="note">(note: hours of work is also in the calculation below - christopher)</p>		
 				
 			</div>
+			
+			<div id="comparison" class="card">
+				<h2>Comparison</h2>
+			
+				<dl>
+					<dt>Car / You:</dt>
+					<dd>The generalized velocity is: [! <code>OUT</code> !] km / [! <code>OUT</code> !] h, ie. [! <code>OUT</code> !] km/h. [*]</dd>
+				
+					<dt>Cycling:</dt>
+					<dd>A person traveling (the same way) by bicycle has a speed of [! <code>OUT</code> !] km/h. [*])</dd>
+					<dt>Walking:</dt>
+					<dd>A person walking has a speed of [! <code>OUT</code> !] km/h.</dd>
+					<p class="proposal">(proposal: i would like to change it to "public transport" - christopher)</p>
+				</dl>
+				
+				<button>Save your data</button>
+			</div>
 
-			<div id="part_03" class="card">
-				<h2>Calculation</h2>
+			<div id="details" class="card">
+				<h2>Details (Input + Calculation)</h2>
+				
+				<p>(repeat Input?)</p>
+				
 				<h3>Way</h3>
 				
 				<p>The total path of your way to the workplace is [! <code>OUT</code> !] km per year [*].</p>
@@ -100,20 +120,7 @@
 			
 			</div>
 			
-			<div id="part_04" class="card">
-				<h2>Comparison</h2>
 			
-				<dl>
-					<dt>Car / You:</dt>
-					<dd>The generalized velocity is: [! <code>OUT</code> !] km / [! <code>OUT</code> !] h, ie. [! <code>OUT</code> !] km/h. [*]</dd>
-				
-					<dt>Cycling:</dt>
-					<dd>A person traveling (the same way) by bicycle has a speed of [! <code>OUT</code> !] km/h. [*])</dd>
-					<dt>Walking:</dt>
-					<dd>A person walking has a speed of [! <code>OUT</code> !] km/h.</dd>
-					<p class="proposal">(proposal: i would like to change it to "public transport" - christopher)</p>
-				</dl>
-			</div>
 			
 			<div id="part_05" class="card">
 				<h2>Appendix *</h2>
