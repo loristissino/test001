@@ -30,7 +30,7 @@
 			<h1>The true speed of a car</h1>
 			<div id="part_01" class="card">
 				<h2>Startpage</h2>
-				<p>The speed of %[ <code>in.person.name</code> ]% is %[ <code>out.total.speed</code> ]% km/h. And what is your car's?</p>
+				<p>The speed of %[ <code>car.person.name</code> ]% is %[ <code>car.total.speed</code> ]% km/h. And what is yours?</p>
 				<button>Caluclate your own speed</button>
 			</div>
 			
@@ -97,11 +97,17 @@
 				<h2>Comparison</h2>
 			
 				<dl>
-					<dt>Car:</dt>
-					<dd>The generalized velocity is: %[ <code>out.total.way</code> ]% km / %[ <code>out.total.time</code> ]% h, ie. %[ <code>out.total.speed</code> ]% km/h. [*]</dd>
+					<dt>Default:</dt>
+					<dd>The speed of a person traveling by %[ <code>car.person.vehile</code> ]% is %[ <code>car.total.speed</code> ]% km/h</dd>
+					
+					<dt>Input:</dt>
+					<dd>Your generalized velocity is: %[ <code>out.total.way</code> ]% km / %[ <code>out.total.time</code> ]% h, ie. %[ <code>out.total.speed</code> ]% km/h. [*]</dd>
 				
 					<dt>Cycling:</dt>
 					<dd>%[ <code>bike.person.name</code> ]% can easily travel by bicycle at %[ <ode>bike.total.speed</code> ]% km/h.</dd>
+					 
+					 <p>or (depending on default &amp; input - three compares should be enough)</p>
+					 
 					<dt>Public Transport:</dt>
 					<dd>%[ <code>public.person.name</code> ]%, who uses the %[ <code>public.transport.vehicle</code> ]% has a speed of %[ <code>public.total.speed</code> ]% km/h.</dd>
 				</dl>
