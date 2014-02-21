@@ -30,7 +30,7 @@
 			<h1>The true speed of a car</h1>
 			<div id="part_01" class="card">
 				<h2>Startpage</h2>
-				<p>The speed of %[ <code>in.person.name</code> ]%'s car is %[out.total.speed]% km/h. And what is your car's?</p>
+				<p>The speed of %[ <code>in.person.name</code> ]% is %[ <code>out.total.speed</code> ]% km/h. And what is your car's?</p>
 				<button>Caluclate your own speed</button>
 			</div>
 			
@@ -44,7 +44,7 @@
 				
 				<h3>Expenses</h3>
 
-				<p>For a more significant computation, however, we must also consider the cost of the %[ <code>in.transport.vehicle</code> ]%. In one year %[in.person.name]% spends:</p>
+				<p>For a more significant computation, however, we must also consider the cost of the %[ <code>in.transport.vehicle</code> ]%. In one year %[ <code>in.person.name</code>]% spends:</p>
 
 				<ul>
 					<li>insurance: &euro; %[ <code>in.expenses.insurance</code> ]%
@@ -73,23 +73,23 @@
 				<h2>Calculation</h2>
 				<h3>Way</h3>
 				
-				<p>The total path of %[ <code>in.person.label</code> ]% way to the workplace is %[out.total.way]% km per year [*].</p>
+				<p>The total path of %[ <code>in.person.label</code> ]% way to the workplace is %[ <code>out.total.way</code> ]% km per year [*].</p>
 				
 				<p>(?:<del><em>door-to-door</em> speed</del>)</p>
 				
 				<h3>Expenses</h3>
 				
-				<p>%[ <code>in.person.name</code> ]% spends &euro; %[out.expenses.vehicle]% per year for %[ <code>in.person.label</code> ]% %[ <code>in.transport.vehicle</code> ]%. %[ <code>in.person.salutatory</code> ]% also spends &euro; %[out.expenses.fuel]% each year in fuel.</p>
+				<p>%[ <code>in.person.name</code> ]% spends &euro; %[ <code>out.expenses.vehicle</code> ]% per year for %[ <code>in.person.label</code> ]% %[ <code>in.transport.vehicle</code> ]%. %[ <code>in.person.salutatory</code> ]% also spends &euro; %[ <code>out.expenses.fuel</code>]% each year in fuel.</p>
 				
-				<p>But the real costs of the %[ <code>in.transport.vehicle</code> ]% use are &euro; %[out.total.expenses]%. [*]</p>
+				<p>But the real costs of the %[ <code>in.transport.vehicle</code> ]% use are &euro; %[ <code>out.total.expenses</code> ]%. [*]</p>
 				
 				<h3>Time</h3>
 
 				<p>What do costs have to do with the speed? Within a year, how much time does %[ <code>in.person.name</code> ]% spend to travel by %[ <code>in.transport.vehicle</code> ]%?</p>
 				
-				<p>We have to take into consideration not only the %[out.time.way]% hours %[ <code>in.person.salutatory</code> ]% spends on driving, but also the time %[ <code>in.person.salutatory</code> ]% worked to afford the %[ <code>in.transport.vehicle</code> ]%: %[out.time.expenses]%.</p>
+				<p>We have to take into consideration not only the %[ <code>out.time.way</code>]% hours %[ <code>in.person.salutatory</code> ]% spends on driving, but also the time %[ <code>in.person.salutatory</code> ]% worked to afford the %[ <code>in.transport.vehicle</code> ]%: %[ <code>out.time.work</code> ]%.</p>
 				
-				<p>In total, it is therefore %[out.total.time]% hours.</p>
+				<p>In total, it is therefore %[ <code>out.total.time</code> ]% hours.</p>
 				
 			</div>
 			
@@ -98,17 +98,17 @@
 			
 				<dl>
 					<dt>Car:</dt>
-					<dd>The generalized velocity is: %[out.total.way]% km / %[out.total.time]% h, ie. %[out.total.speed]% km/h. [*]</dd>
+					<dd>The generalized velocity is: %[ <code>out.total.way</code> ]% km / %[ <code>out.total.time</code> ]% h, ie. %[ <code>out.total.speed</code> ]% km/h. [*]</dd>
 				
 					<dt>Cycling:</dt>
-					<dd>%[ <code>bike.person.name</code> ]% can easily travel by bicycle at %[bike.total.speed]% km/h.</dd>
+					<dd>%[ <code>bike.person.name</code> ]% can easily travel by bicycle at %[ <ode>bike.total.speed</code> ]% km/h.</dd>
 					<dt>Public Transport:</dt>
-					<dd>%[ <code>public.person.name</code> ]%, who uses the %[ <code>public.transport.vehicle</code> ]% has a speed of %[public.total.speed]% km/h.</dd>
+					<dd>%[ <code>public.person.name</code> ]%, who uses the %[ <code>public.transport.vehicle</code> ]% has a speed of %[ <code>public.total.speed</code> ]% km/h.</dd>
 				</dl>
 			</div>
 			
 			<div id="part_05" class="card">
-				<h2>Appendix / Comments*</h2>
+				<h2>Appendix *</h2>
 				
 			</div>
 		</div>
