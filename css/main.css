@@ -106,8 +106,14 @@ textarea {
 	border: 1px solid #dddddd;
 }
 
+.new {
+	color: #ADBD6C;
+}
 
-
+.note {
+	color: #B24D2E;
+	font-style: italic;
+}
 
 
 
