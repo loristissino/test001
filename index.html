@@ -39,6 +39,8 @@
 				<p>You use your [? <code>IN</code> ?]  to get to work.</p>
 				
 				<p class="proposal">(proposal: i would like to make the transport (and person) a value to choose too - christopher)</p>
+        <p class="note">(note: the vehicle could be chosen from a fixed list [car, motorcycle, bicycle] - loris)</p>
+        <p class="proposal">(note: the name of the vehicle's owner should be chosen by the user - loris)</p>
 
 				<h3>Way</h3>
 				
@@ -58,8 +60,11 @@
 				<p>The car was purchased for &euro; [? <code>IN</code> ?]. You expect to be able to use it [? <code>IN</code> ?] years.</p>
 				
 				<p class="new">(new: The car is used for [? <code>IN</code> ?] % private purposes. - christopher)</p>
+				<p class="note">(note: How would we take it in consideration? And what do you mean by "private purposes"? - loris)</p>
 				
 				<p>One liter of fuel costs &euro; [? <code>IN</code> ?], and your car consumes [? <code>IN</code> ?] liter per km</p>
+
+				<p class="note">(note: We have to think about how to deal with different currencies, fuel prices, etc - loris)</p>
 				
 				<h3>Time</h3>
 				
@@ -70,6 +75,8 @@
 				<p>You have a monthly salary of &euro; [? <code>IN</code> ?]<del>, for [? <code>IN</code> ?] hours of work</del>.</p>
 
 			<p class="note">(note: hours of work is also in the calculation below - christopher)</p>
+
+			<p class="note">(note: yes, but there it is an output - loris)</p>
 			
 			<button onclick="location.href='./index.html#comparison'">compute</button>		
 				
@@ -87,6 +94,7 @@
 					<dt>Walking:</dt>
 					<dd>A person walking has a speed of [! <code>OUT</code> !] km/h. (<a href="./index.html#details">details</a>)</dd>
 					<p class="proposal">(proposal: i would like to change it to "public transport" - christopher)</p>
+					<p class="note">(proposal: change it to public transport or add public transport? - loris)</p>
 				</dl>
 				
 				<button>Save your data</button>
@@ -103,7 +111,9 @@
 				
 				<p><del>We can calculate the <em>door-to-door</em> speed of in a very simple way, with the classic <em>space / time</em> formula: it is [! <code>OUT</code> !] km/h. [*]</del></p>
 				<p class="note">(note: why do we need the door-to-door-speed? - christopher)</p>
-				
+        
+        <p class="note">(note: in my original version, the idea was to show that the speed is much lower than the one seen on one's speedometer, even if you don't consider the costs involved; you have to take a long way to bypass the city center, for instance, or you park your car quite far from your destination - loris)</p>
+        
 				<h3>Expenses</h3>
 				
 				<p>You have to spend &euro; [! <code>OUT</code> !] per year for a vehicle.</p>
