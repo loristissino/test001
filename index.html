@@ -30,7 +30,7 @@
 			<h1>The true speed of a car</h1>
 			<div id="start" class="card">
 				<h2>Startpage</h2>
-				<p>The speed of <a href="./index.html#details">Mario</a> is [! <code>OUT</code> !] km/h. And what is yours ?</p>
+				<p>The speed of <a href="./index.html#details">Mario</a>&apos;s car is [! <code>OUT</code> !] km/h. And what is yours ?</p>
 				<button onclick="location.href='./index.html#input'">Calculate your own speed</button>
 			</div>
 			
@@ -47,22 +47,22 @@
 				
 				<h3>Expenses</h3>
 
-				<p>For a more significant computation, however, we must also consider the cost of the car. In one year you spend:</p>
+				<p>For a more significant computation, however, we must also consider the cost of the [? <code>IN</code> ?]. In one year you spend:</p>
 
 				<ul>
-					<li>car insurance: &euro; [? <code>IN</code> ?]
+					<li>insurance: &euro; [? <code>IN</code> ?]
 					<li>ownership tax: &euro; [? <code>IN</code> ?]
 					<li>expenses for maintenance: &euro; [? <code>IN</code> ?]
 					<li>other expenses (tolls, parking, etc..): &euro; [? <code>IN</code> ?]
 				</ul>
 
-				<p>The car was purchased for &euro; [? <code>IN</code> ?]. You expect to be able to use it [? <code>IN</code> ?] years.</p>
+				<p>The [? <code>IN</code> ?] was purchased for &euro; [? <code>IN</code> ?]. You expect to be able to use it [? <code>IN</code> ?] years.</p>
 				
-				<p class="proposal">(proposal: The car is used for [? <code>IN</code> ?] % private purposes.)</p>
+				<p class="proposal">(proposal: The [? <code>IN</code> ?] is used for [? <code>IN</code> ?] % private purposes.)</p>
 				<p class="note">(note: How would we take it in consideration? And what do you mean by "private purposes"? - loris)</p>
-				<p class="proposal"> meaning, that you don't use your car only to get to work and this should be taken into account to the expenses - christopher)</p>
+				<p class="proposal">(proposal: meaning, that you don't use your car only to get to work and this should be taken into account to the expenses - christopher)</p>
 				
-				<p>One liter of fuel costs &euro; [? <code>IN</code> ?], and your car consumes [? <code>IN</code> ?] liter per km</p>
+				<p>(if car/motocycle: One liter of fuel costs &euro; [? <code>IN</code> ?], and your car consumes [? <code>IN</code> ?] liter per km)</p>
 
 				<p class="note">(note: We have to think about how to deal with different currencies, fuel prices, etc - loris)</p>
 				
@@ -72,7 +72,7 @@
 				
 				<p>You will drive the route to work [? <code>IN</code> ?] times a day</p>
 				
-				<p>You work [? <code>IN</code> ?] a day, for [? <code>IN</code> ?] days per week and [? <code>IN</code> ?] weeks in a year.</p>
+				<p>You work [? <code>IN</code> ?] hours a day, for [? <code>IN</code> ?] days per week and [? <code>IN</code> ?] weeks in a year.</p>
 				
 				<p>You have a monthly salary of &euro; [? <code>IN</code> ?]<del>, for [? <code>OUT</code> ?] hours of work</del>.</p>
 
@@ -80,7 +80,7 @@
 
 			<p class="note">(note: yes, but there it is an output - loris)</p>
 			
-			<p class="proposal">(proposal: yes, because it is a result of the line above and doesn't to be given twice - christopher)</p>
+			<p class="proposal">(proposal: yes, but because it is a result of hours x days x weeks : 12 it doesn't have to be given twice - christopher)</p>
 			
 			<button onclick="location.href='./index.html#comparison'">compute</button>		
 				
@@ -90,16 +90,20 @@
 				<h2>Comparison</h2>
 			
 				<dl>
-					<dt>Car / You:</dt>
-					<dd>The generalized velocity is: [! <code>OUT</code> !] km / [! <code>OUT</code> !] h, ie. [! <code>OUT</code> !] km/h. [*] (<a href="./index.html#details">details</a>)</dd>
+					<dt>Car:</dt>
+					<dd>Traveling by car you have a speed of <code>OUT</code> !] km/h. [*] (<a href="./index.html#details">details</a>)</dd>
+					
+					<dt>Motocycle:</dt>
+					<dd>Traveling by motocycle you have a speed of <code>OUT</code> !] km/h. [*] (<a href="./index.html#details">details</a>)</dd>
 				
 					<dt>Cycling:</dt>
-					<dd>A person traveling (the same way) by bicycle has a speed of [! <code>OUT</code> !] km/h. [*]) (<a href="./index.html#details">details</a>)</dd>
+					<dd>Traveling (the same way) by bicycle you have a speed of [! <code>OUT</code> !] km/h. [*]) (<a href="./index.html#details">details</a>)</dd>
+					
 					<dt>Walking:</dt>
-					<dd>A person walking has a speed of [! <code>OUT</code> !] km/h. (<a href="./index.html#details">details</a>)</dd>
+					<dd>Just walking you have a speed of [! <code>OUT</code> !] km/h. (<a href="./index.html#details">details</a>)</dd>
 					<p class="proposal">(proposal: i would like to change it to "public transport" - christopher)</p>
 					<p class="note">(note: change it to public transport or add public transport? - loris)</p>
-					<p class="proposal">(proposal: change, because only few people just walk to work - christopher)</p>
+					<p class="proposal">(proposal: change, because only few people just walk to work and i think three compares a just fine, but seems like motocycle is important in italy too - christopher)</p>
 				</dl>
 				
 				<button>Save your data</button>
@@ -119,19 +123,19 @@
         
         <p class="note">(note: in my original version, the idea was to show that the speed is much lower than the one seen on one's speedometer, even if you don't consider the costs involved; you have to take a long way to bypass the city center, for instance, or you park your car quite far from your destination - loris)</p>
         
-        		<p class="proposal">(proposal: yes, but that is all include in the way input: "between home and work" - christopher)</p>
+        		<p class="proposal">(proposal: yes, but that is all included in the " input, way", the time & distance between home and workplace - christopher)</p>
         
 				<h3>Expenses</h3>
 				
-				<p>You have to spend &euro; [! <code>OUT</code> !] per year for a vehicle.</p>
+				<p>The person spends &euro; [! <code>OUT</code> !] per year for a vehicle.</p>
 				
-				<p>You also have to spend &euro; [! <code>OUT</code> !] each year for fuel. But the real costs [*] are &euro; [! <code>OUT</code> !].</p>
+				<p>The person spends &euro; [! <code>OUT</code> !] each year for fuel. But the real costs [*] are &euro; [! <code>OUT</code> !].</p>
 				
 				<h3>Time</h3>
 
 				<p>What do costs have to do with the speed?</p>
 				
-				<p>Within a year, how much time do you spend to travel?. We have to take into consideration not only the [! <code>OUT</code> !] hours on driving, but also the time you have to work to afford the vehicle - you have to work for [! <code>OUT</code> !] hours.</p>
+				<p>Within a year, how much time does the person spend to travel?. We have to take into consideration not only the [! <code>OUT</code> !] hours on driving, but also the time the person has to work to afford the vehicle - [! <code>OUT</code> !] hours.</p>
 				
 				<p>In total, it is therefore [! <code>OUT</code> !] hours.</p>
 				
