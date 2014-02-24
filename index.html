@@ -30,37 +30,37 @@
 			<h1>The true speed of a car</h1>
 			<div id="start" class="card">
 				<h2>Startpage</h2>
-				<p>The speed of <a href="./index.html#details">Mario</a>&apos;s car is [! <code>OUT</code> !] km/h. And what is yours ?</p>
+				<p>The speed of <a href="./index.html#details">Mario</a>&apos;s car is %[ <code>details.total.speed</code> ]% km/h. And what is yours ?</p>
 				<button onclick="location.href='./index.html#input'">Calculate your own speed</button>
 			</div>
 			
 			<div id="input" class="card">
 				<h2>Input</h2>
 				
-				<p>You use your [? <code>LIST</code> ?]  to get to work.</p>
+				<p>You use your [? <code>select.transport.vehicle</code> ?]  to get to work.</p>
 
 				<h3>Way</h3>
 				
-				<p>Between leaving home and reaching the workplace [? <code>IN</code> ?] minutes pass. The ride is [? <code>IN</code> ?] kilometers. [*]</p>
+				<p>Between leaving home and reaching the workplace %[ <code>input.way.duration</code> ]% minutes pass. The ride is %[ <code>input.way.distance</code> ]% kilometers. [*]</p>
 				
 				<h3>Expenses</h3>
 
-				<p>For a more significant computation, however, we must also consider the cost of the [? <code>IN</code> ?]. In one year you spend:</p>
+				<p>For a more significant computation, however, we must also consider the cost of the %[ <code>select.transport.vehicle</code> ]%. In one year you spend:</p>
 
 				<ul>
-					<li>insurance: &euro; [? <code>IN</code> ?]
-					<li>ownership tax: &euro; [? <code>IN</code> ?]
-					<li>expenses for maintenance: &euro; [? <code>IN</code> ?]
-					<li>other expenses (tolls, parking, etc..): &euro; [? <code>IN</code> ?]
+					<li>insurance: &euro; %[ <code>input.expenses.insurance</code> ]%</li>
+					<li>tax: &euro; %[ <code>input.expenses.tax</code> ]%</li>
+					<li>maintenance: &euro; %[ <code>input.expenses.maintenance</code> ]%</li>
+					<li>other expenses (tolls, parking, etc..): &euro; %[ <code>input.expenses.other</code> ]%</li>
 				</ul>
 
-				<p>The [? <code>IN</code> ?] was purchased for &euro; [? <code>IN</code> ?]. You expect to be able to use it [? <code>IN</code> ?] years.</p>
+				<p>The %[ <code>select.transport.vehicle</code> ]% was purchased for &euro; %[ <code>input.transport.price</code> ]%. You expect to be able to use it %[ <code>input.transport.years</code> ]% years.</p>
 				
-				<p class="proposal">(proposal: The [? <code>IN</code> ?] is used for [? <code>IN</code> ?] % private purposes.)</p>
+				<p class="proposal">(proposal: The %[ <code>select.transport.vehicle</code> ]% is used for %[ <code>input.transport.usage</code> ]% % private purposes.)</p>
 				<p class="note">(note: How would we take it in consideration? And what do you mean by "private purposes"? - loris)</p>
 				<p class="proposal">(proposal: meaning, that you don't use your car only to get to work and this should be taken into account to the expenses - christopher)</p>
 				
-				<p>(if car/motocycle: One liter of fuel costs &euro; [? <code>IN</code> ?], and your car consumes [? <code>IN</code> ?] liter per km)</p>
+				<p>if car/motocycle: One liter of fuel costs &euro; %[ <code>input.expenses.fuel</code> ]%, and the vehicle consumes %[ <code>input.transport.consumption</code> ]% liter per 100 km</p>
 
 				<p class="note">(note: We have to think about how to deal with different currencies, fuel prices, etc - loris)</p>
 				
@@ -68,11 +68,11 @@
 				
 				<h3>Time</h3>
 				
-				<p>You will drive the route to work [? <code>IN</code> ?] times a day</p>
+				<p>You will drive the route to work %[ <code>input.way.times</code> ]% times a day</p>
 				
-				<p>You work [? <code>IN</code> ?] hours a day, for [? <code>IN</code> ?] days per week and [? <code>IN</code> ?] weeks in a year.</p>
+				<p>You work %[ <code>input.work.hours</code> ]% hours a day, for %[ <code>input.work.days</code> ]% days per week and %[ <code>input.work.weeks</code> ]% weeks in a year.</p>
 				
-				<p>You have a monthly salary of &euro; [? <code>IN</code> ?]<del>, for [? <code>OUT</code> ?] hours of work</del>.</p>
+				<p>You have a monthly salary of &euro; %[ <code>input.work.salary</code> ]%<del>, for [? <code>OUT</code> ?] hours of work</del>.</p>
 
 			<p class="note">(note: hours of work is also in the calculation below - christopher)</p>
 
@@ -89,16 +89,16 @@
 			
 				<dl>
 					<dt>Car:</dt>
-					<dd>Traveling by car you have a speed of <code>OUT</code> !] km/h. [*] (<a href="./index.html#details">details</a>)</dd>
+					<dd>Traveling by car you have a speed of %[ <code>compute_car.total.speed</code> ]% km/h. [*] (<a href="./index.html#details">details</a>)</dd>
 					
 					<dt>Motocycle:</dt>
-					<dd>Traveling by motocycle you have a speed of <code>OUT</code> !] km/h. [*] (<a href="./index.html#details">details</a>)</dd>
+					<dd>Traveling by motocycle you have a speed of %[ <code>compute_moto.total.speed</code> ]% km/h. [*] (<a href="./index.html#details">details</a>)</dd>
 				
 					<dt>Cycling:</dt>
-					<dd>Traveling (the same way) by bicycle you have a speed of [! <code>OUT</code> !] km/h. [*]) (<a href="./index.html#details">details</a>)</dd>
+					<dd>Traveling (the same way) by bicycle you have a speed of [%[ <code>compute_bike.total.speed</code> ]% km/h. [*]) (<a href="./index.html#details">details</a>)</dd>
 					
 					<dt>Walking:</dt>
-					<dd>Just walking you have a speed of [! <code>OUT</code> !] km/h. (<a href="./index.html#details">details</a>)</dd>
+					<dd>Just walking you have a speed of %[ <code>compute_walk.total.speed</code> ]% km/h. (<a href="./index.html#details">details</a>)</dd>
 					<p class="proposal">(proposal: i would like to change it to "public transport" - christopher)</p>
 					<p class="note">(note: change it to public transport or add public transport? - loris)</p>
 					<p class="proposal">(proposal: change, because only few people just walk to work and i think three compares a just fine, but seems like motocycle is important in italy too - christopher)</p>
@@ -108,13 +108,13 @@
 			</div>
 
 			<div id="details" class="card">
-				<h2>Details (Input + Calculation)</h2>
+				<h2>Details (Calculation)</h2>
 				
-				<p class="proposal">(repeat Input?)</p>
+				<p class="proposal">(repeat the Input? - and how?)</p>
 				
 				<h3>Way</h3>
 				
-				<p>The total path of the way to the workplace is [! <code>OUT</code> !] km per year [*].</p>
+				<p>The total path of the way to the workplace is %[ <code>details.total.way</code> ]% km per year [*].</p>
 				
 				<p><del>We can calculate the <em>door-to-door</em> speed of in a very simple way, with the classic <em>space / time</em> formula: it is [! <code>OUT</code> !] km/h. [*]</del></p>
 				<p class="note">(note: why do we need the door-to-door-speed? - christopher)</p>
@@ -125,21 +125,21 @@
         
 				<h3>Expenses</h3>
 				
-				<p>The person spends &euro; [! <code>OUT</code> !] per year for a vehicle.</p>
+				<p>The person spends &euro; %[ <code>details.expenses.vehicle</code> ]% per year for a %[ <code>out.transport.vehicle</code> ]%.</p>
 				
-				<p>The person spends &euro; [! <code>OUT</code> !] each year for fuel. But the real costs [*] are &euro; [! <code>OUT</code> !].</p>
+				<p>The person spends &euro; %[ <code>details.expenses.fuel</code>]%  each year for fuel. But the real costs [*] are &euro; %[ <code>details.total.expenses</code> ]%.</p>
 				
 				<h3>Time</h3>
 
 				<p>What do costs have to do with the speed?</p>
 				
-				<p>Within a year, how much time does the person spend to travel?. We have to take into consideration not only the [! <code>OUT</code> !] hours on driving, but also the time the person has to work to afford the vehicle - [! <code>OUT</code> !] hours.</p>
+				<p>Within a year, how much time does the person spend to travel?. We have to take into consideration not only the %[ <code>details.time.way</code>]% hours on driving, but also the time the person has to work to afford the vehicle - %[ <code>details.time.work</code> ]% hours.</p>
 				
-				<p>In total, it is therefore [! <code>OUT</code> !] hours.</p>
+				<p>In total, it is therefore %[ <code>details.total.time</code> ]% hours.</p>
 				
 				<h3>Summary</h3>
 				
-				<p class="proposal"><strong>The generalized velocity is: [! <code>OUT</code> !] km / [! <code>OUT</code> !] h, ie. [! <code>OUT</code> !] km/h</strong></p>
+				<p><strong>The generalized velocity is: %[ <code>details.total.way</code> ]% km / %[ <code>details.total.time</code> ]% h, ie. %[ <code>details.total.speed</code> ]% km/h</strong></p>
 			
 			</div>
 			
