@@ -106,6 +106,19 @@ textarea {
 	border: 1px solid #dddddd;
 }
 
+.expand {
+	color: #333333;
+	margin: 0;
+	text-align: right;
+}
+
+.comment {
+	border: 1px solid #333333;
+	padding: 0.5em;
+	margin: 0.5em 0;
+	display: none;
+}
+
 .new {
 	color: #ADBD6C;
 }

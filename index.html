@@ -56,15 +56,20 @@
 
 				<p>The %[ <code>select.transport.vehicle</code> ]% was purchased for &euro; %[ <code>input.transport.price</code> ]%. You expect to be able to use it %[ <code>input.transport.years</code> ]% years.</p>
 				
-				<p class="proposal">(proposal: The %[ <code>select.transport.vehicle</code> ]% is used for %[ <code>input.transport.usage</code> ]% % private purposes.)</p>
-				<p class="note">(note: How would we take it in consideration? And what do you mean by "private purposes"? - loris)</p>
-				<p class="proposal">(proposal: meaning, that you don't use your car only to get to work and this should be taken into account to the expenses - christopher)</p>
+				<p class="expand">Comment [+]</p>
+				<div class="comment">
+				 <p class="proposal">(proposal: The %[ <code>select.transport.vehicle</code> ]% is used for %[ <code>input.transport.usage</code> ]% % private purposes.)</p>
+				 <p class="note">(note: How would we take it in consideration? And what do you mean by "private purposes"? - loris)</p>
+				 <p class="proposal">(proposal: meaning, that you don't use your car only to get to work and this should be taken into account to the expenses - christopher)</p>
+				</div>
 				
 				<p>if car/motocycle: One liter of fuel costs &euro; %[ <code>input.expenses.fuel</code> ]%, and the vehicle consumes %[ <code>input.transport.consumption</code> ]% liter per 100 km</p>
 
-				<p class="note">(note: We have to think about how to deal with different currencies, fuel prices, etc - loris)</p>
-				
-				<p class="proposal">(proposal: Maybe first we should stick to the euro (sic!), but later it, should be no problem to add a currency parameter)</p>
+				<p class="expand">Comment [+]</p>
+				<div class="comment">
+				  <p class="note">(note: We have to think about how to deal with different currencies, fuel prices, etc - loris)</p>
+				  <p class="proposal">(proposal: Maybe first we should stick to the euro (sic!), but later it, should be no problem to add a currency parameter - fuel prices not nessary)</p>
+				</div>
 				
 				<h3>Time</h3>
 				
@@ -73,12 +78,13 @@
 				<p>You work %[ <code>input.work.hours</code> ]% hours a day, for %[ <code>input.work.days</code> ]% days per week and %[ <code>input.work.weeks</code> ]% weeks in a year.</p>
 				
 				<p>You have a monthly salary of &euro; %[ <code>input.work.salary</code> ]%<del>, for [? <code>OUT</code> ?] hours of work</del>.</p>
-
-			<p class="note">(note: hours of work is also in the calculation below - christopher)</p>
-
-			<p class="note">(note: yes, but there it is an output - loris)</p>
-			
-			<p class="proposal">(proposal: yes, but because it is a result of hours x days x weeks : 12 it doesn't have to be given twice - christopher)</p>
+				
+				<p class="expand">Comment [+]</p>
+				<div class="comment">
+				 <p class="note">(note: hours of work is also in the calculation below - christopher)</p>
+                 <p class="note">(note: yes, but there it is an output - loris)</p>
+			     <p class="proposal">(proposal: yes, but because it is a result of hours x days x weeks : 12 it doesn't have to be given twice - christopher)</p>
+			   </div> 
 			
 			<button onclick="location.href='./index.html#comparison'">compute</button>		
 				
@@ -99,9 +105,12 @@
 					
 					<dt>Walking:</dt>
 					<dd>Just walking you have a speed of %[ <code>compute_walk.total.speed</code> ]% km/h. (<a href="./index.html#details">details</a>)</dd>
-					<p class="proposal">(proposal: i would like to change it to "public transport" - christopher)</p>
-					<p class="note">(note: change it to public transport or add public transport? - loris)</p>
-					<p class="proposal">(proposal: change, because only few people just walk to work and i think three compares a just fine, but seems like motocycle is important in italy too - christopher)</p>
+					
+					<p class="expand">Comment [+]</p>
+					<div class="comment">
+					 <p class="note">(note: change it to public transport or add public transport? - loris)</p>
+					 <p class="proposal">(proposal: change, because only few people just walk to work and i think three compares a just fine, but seems like motocycle is important in italy too - christopher)</p>
+					 </div>
 				</dl>
 				
 				<button>Save your data</button>
@@ -117,11 +126,13 @@
 				<p>The total path of the way to the workplace is %[ <code>details.total.way</code> ]% km per year [*].</p>
 				
 				<p><del>We can calculate the <em>door-to-door</em> speed of in a very simple way, with the classic <em>space / time</em> formula: it is [! <code>OUT</code> !] km/h. [*]</del></p>
-				<p class="note">(note: why do we need the door-to-door-speed? - christopher)</p>
-        
-        <p class="note">(note: in my original version, the idea was to show that the speed is much lower than the one seen on one's speedometer, even if you don't consider the costs involved; you have to take a long way to bypass the city center, for instance, or you park your car quite far from your destination - loris)</p>
-        
-        		<p class="proposal">(proposal: yes, but that is all included in the " input, way", the time & distance between home and workplace - christopher)</p>
+				
+				<p class="expand">Comment [+]</p>
+				 <div class="comment">
+				  <p class="note">(note: why do we need the door-to-door-speed? - christopher)</p>
+        		  <p class="note">(note: in my original version, the idea was to show that the speed is much lower than the one seen on one's speedometer, even if you don't consider the costs involved; you have to take a long way to bypass the city center, for instance, or you park your car quite far from your destination - loris)</p>
+                  <p class="proposal">(proposal: yes, but that is all included in the " input, way", the time & distance between home and workplace - christopher)</p>
+                </div>
         
 				<h3>Expenses</h3>
 				
@@ -155,6 +166,14 @@
         <script src="./js/vendor/jquery-1.9.0.min.js"></script>
         <script src="./js/plugins.js"></script>
         <script src="./js/main.js"></script>
+        <script>
+         $(document).ready(function() {
+          var comment = $(".expand");
+          comment.click(function () {
+			$(this).next("div.comment").toggle();
+		  });
+		 }); 	
+        </script>
         
     </body>
 </html>
