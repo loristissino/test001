@@ -143,9 +143,13 @@
         
 				<h3>Expenses</h3>
 				
-				<p>The person spends &euro; %[ <code>details.expenses.vehicle</code> ]% per year for a %[ <code>details.transport.vehicle</code> ]%.</p>
+				<p>The person spends &euro; %[ <code>details.expenses.upkeeping</code> ]% per year for a %[ <code>details.transport.vehicle</code> ]%.</p>
 				
 				<p>The person spends &euro; %[ <code>details.expenses.fuel</code>]%  each year for fuel. But the real costs [*] are &euro; %[ <code>details.total.expenses</code> ]%.</p>
+				<p class="expand">Comment [+]</p>
+				<div class="comment">
+				  <p class="note">the "real" costs are than expenses.upkeeping, expenses.fuel &amp; the vehicle-price: transport.price / transport.years (* 100 / transport.usage), correct? - christopher.</p>
+				</div>
 				
 				<h3>Time</h3>
 
