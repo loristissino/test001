@@ -56,19 +56,20 @@
 
 				<p>The %[ <code>select.transport.vehicle</code> ]% was purchased for &euro; %[ <code>input.transport.price</code> ]%. You expect to be able to use it %[ <code>input.transport.years</code> ]% years.</p>
 				
+				<p>The %[ <code>select.transport.vehicle</code> ]% is used for %[ <code>input.transport.usage</code> ]% % private purposes.</p>
+				
 				<p class="expand">Comment [+]</p>
 				<div class="comment">
-				 <p class="proposal">(proposal: The %[ <code>select.transport.vehicle</code> ]% is used for %[ <code>input.transport.usage</code> ]% % private purposes.)</p>
-				 <p class="note">(note: How would we take it in consideration? And what do you mean by "private purposes"? - loris)</p>
-				 <p class="proposal">(proposal: meaning, that you don't use your car only to get to work and this should be taken into account to the expenses - christopher)</p>
+				 <p class="note">How would we take it in consideration? And what do you mean by "private purposes"? - loris</p>
+				 <p class="proposal">You don't use your car only to get to work and this should be taken into account to the expenses - christopher</p>
 				</div>
 				
 				<p>if car/motocycle: One liter of fuel costs &euro; %[ <code>input.expenses.fuel</code> ]%, and the vehicle consumes %[ <code>input.transport.consumption</code> ]% liter per 100 km</p>
 
 				<p class="expand">Comment [+]</p>
 				<div class="comment">
-				  <p class="note">(note: We have to think about how to deal with different currencies, fuel prices, etc - loris)</p>
-				  <p class="proposal">(proposal: Maybe first we should stick to the euro (sic!), but later it, should be no problem to add a currency parameter - fuel prices not nessary)</p>
+				  <p class="note">We have to think about how to deal with different currencies, fuel prices, etc - loris</p>
+				  <p class="proposal">Maybe first we should stick to the euro, but later it, should be no problem to add a currency parameter - fuel prices not necessary - christopher.</p>
 				</div>
 				
 				<h3>Time</h3>
@@ -81,9 +82,9 @@
 				
 				<p class="expand">Comment [+]</p>
 				<div class="comment">
-				 <p class="note">(note: hours of work is also in the calculation below - christopher)</p>
-                 <p class="note">(note: yes, but there it is an output - loris)</p>
-			     <p class="proposal">(proposal: yes, but because it is a result of hours x days x weeks : 12 it doesn't have to be given twice - christopher)</p>
+				 <p class="note">hours of work is also in the calculation - christopher.</p>
+                 <p class="note">yes, but there it is an output - loris</p>
+			     <p class="proposal">yes, but because it is a result of hours x days x weeks : 12 it doesn't have to be given twice - christopher</p>
 			   </div> 
 			
 			<button onclick="location.href='./index.html#comparison'">compute</button>		
@@ -108,12 +109,18 @@
 					
 					<p class="expand">Comment [+]</p>
 					<div class="comment">
-					 <p class="note">(note: change it to public transport or add public transport? - loris)</p>
-					 <p class="proposal">(proposal: change, because only few people just walk to work and i think three compares a just fine, but seems like motocycle is important in italy too - christopher)</p>
+					 <p class="note">change it to public transport or add public transport? - loris</p>
+					 <p class="proposal">change, because only few people just walk to work and i think three compares a just fine, but seems like motocycle is important in italy too - christopher</p>
 					 </div>
 				</dl>
 				
 				<button>Save your data</button>
+				
+				<p class="expand">Comment [+]</p>
+				<div class="comment">
+				  <p class="note">not sure about the saving the data on the server, see also the wiki - christopher.</p>
+				</div>
+				
 			</div>
 
 			<div id="details" class="card">
@@ -129,14 +136,14 @@
 				
 				<p class="expand">Comment [+]</p>
 				 <div class="comment">
-				  <p class="note">(note: why do we need the door-to-door-speed? - christopher)</p>
-        		  <p class="note">(note: in my original version, the idea was to show that the speed is much lower than the one seen on one's speedometer, even if you don't consider the costs involved; you have to take a long way to bypass the city center, for instance, or you park your car quite far from your destination - loris)</p>
-                  <p class="proposal">(proposal: yes, but that is all included in the " input, way", the time & distance between home and workplace - christopher)</p>
+				  <p class="note">why do we need the door-to-door-speed? - christopher)</p>
+        		  <p class="note">in my original version, the idea was to show that the speed is much lower than the one seen on one's speedometer, even if you don't consider the costs involved; you have to take a long way to bypass the city center, for instance, or you park your car quite far from your destination - loris)</p>
+                  <p class="proposal">that is what the whole app is about, isn't it? But these values are already given in input.way.duration & input.way.distance - christopher</p>
                 </div>
         
 				<h3>Expenses</h3>
 				
-				<p>The person spends &euro; %[ <code>details.expenses.vehicle</code> ]% per year for a %[ <code>out.transport.vehicle</code> ]%.</p>
+				<p>The person spends &euro; %[ <code>details.expenses.vehicle</code> ]% per year for a %[ <code>details.transport.vehicle</code> ]%.</p>
 				
 				<p>The person spends &euro; %[ <code>details.expenses.fuel</code>]%  each year for fuel. But the real costs [*] are &euro; %[ <code>details.total.expenses</code> ]%.</p>
 				
