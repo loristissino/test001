@@ -64,7 +64,7 @@
 				 <p class="proposal">You don't use your car only to get to work and this should be taken into account to the expenses - christopher</p>
 				</div>
 				
-				<p>if car/motocycle: One liter of fuel costs &euro; %[ <code>input.expenses.fuel</code> ]%, and the vehicle consumes %[ <code>input.transport.consumption</code> ]% liter per 100 km</p>
+				<p>if car/motorcycle: One liter of fuel costs &euro; %[ <code>input.expenses.fuel</code> ]%, and the vehicle consumes %[ <code>input.transport.consumption</code> ]% liter per 100 km</p>
 
 				<p class="expand">Comment [+]</p>
 				<div class="comment">
@@ -98,8 +98,8 @@
 					<dt>Car:</dt>
 					<dd>Traveling by car you have a speed of %[ <code>compute_car.total.speed</code> ]% km/h. [*] (<a href="./index.html#details">details</a>)</dd>
 					
-					<dt>Motocycle:</dt>
-					<dd>Traveling by motocycle you have a speed of %[ <code>compute_moto.total.speed</code> ]% km/h. [*] (<a href="./index.html#details">details</a>)</dd>
+					<dt>Motorcycle:</dt>
+					<dd>Traveling by motorcycle you have a speed of %[ <code>compute_moto.total.speed</code> ]% km/h. [*] (<a href="./index.html#details">details</a>)</dd>
 				
 					<dt>Cycling:</dt>
 					<dd>Traveling (the same way) by bicycle you have a speed of [%[ <code>compute_bike.total.speed</code> ]% km/h. [*]) (<a href="./index.html#details">details</a>)</dd>
@@ -143,12 +143,17 @@
         
 				<h3>Expenses</h3>
 				
-				<p>The person spends &euro; %[ <code>details.expenses.upkeeping</code> ]% per year for a %[ <code>details.transport.vehicle</code> ]%.</p>
+				<p>The person spends &euro; %[ <code>details.expenses.upkeeping</code> ]% per year for the upkeeping of the %[ <code>details.transport.vehicle</code> ]%.</p>
 				
-				<p>The person spends &euro; %[ <code>details.expenses.fuel</code>]%  each year for fuel. But the real costs [*] are &euro; %[ <code>details.total.expenses</code> ]%.</p>
+				<p>if car/motorcycle: She /he also spends &euro; %[ <code>details.expenses.fuel</code>]%  each year for fuel.</p>
+				
+				<p>And don&apos;t forget the vehicle itself, which costs &euro; %[ <code>details.expenses.vehicle</code> ]% each year.</p>
+				
+				<p>Thus the total expenses per year are &euro; %[ <code>details.total.expenses</code> ]%.</p>
+				
 				<p class="expand">Comment [+]</p>
 				<div class="comment">
-				  <p class="note">the "real" costs are than expenses.upkeeping, expenses.fuel &amp; the vehicle-price: transport.price / transport.years (* 100 / transport.usage), correct? - christopher.</p>
+				  <p class="note">these are the "real" costs: expenses.upkeeping, expenses.fuel &amp; expenses.vehicle - transport.price / transport.years [/ 100 * (100 - transport.usage)], correct? - christopher.</p>
 				</div>
 				
 				<h3>Time</h3>
