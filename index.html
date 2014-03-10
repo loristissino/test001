@@ -37,6 +37,8 @@
 			<div id="input" class="card">
 				<h2>Input</h2>
 				
+				<h3>Transport</h3>
+				
 				<p>You use your [? <code>select.transport.vehicle</code> ?]  to get to work.</p>
 
 				<h3>Way</h3>
@@ -76,9 +78,9 @@
 				
 				<p>You will drive the route to work %[ <code>input.way.times</code> ]% times a day</p>
 				
-				<p>You work %[ <code>input.work.hours</code> ]% hours a day, for %[ <code>input.work.days</code> ]% days per week and %[ <code>input.work.weeks</code> ]% weeks in a year.</p>
+				<p>You work %[ <code>input.time.hours</code> ]% hours a day, for %[ <code>input.time.days</code> ]% days per week and %[ <code>input.time.weeks</code> ]% weeks in a year.</p>
 				
-				<p>You have a monthly salary of &euro; %[ <code>input.work.salary</code> ]%<del>, for [? <code>OUT</code> ?] hours of work</del>.</p>
+				<p>You have a monthly salary of &euro; %[ <code>input.time.salary</code> ]%<del>, for [? <code>OUT</code> ?] hours of work</del>.</p>
 				
 				<p class="expand">Comment [+]</p>
 				<div class="comment">
@@ -94,16 +96,16 @@
 			
 				<dl>
 					<dt>Car:</dt>
-					<dd>Traveling by car you have a speed of %[ <code>compute_car.total.speed</code> ]% km/h. [*] (<a href="./index.html#details">details</a>)</dd>
+					<dd>Traveling by car you have a speed of %[ <code>car.total.speed</code> ]% km/h. [*] (<a href="./index.html#details">details</a>)</dd>
 					
 					<dt>Motorcycle:</dt>
-					<dd>Traveling by motorcycle you have a speed of %[ <code>compute_moto.total.speed</code> ]% km/h. [*] (<a href="./index.html#details">details</a>)</dd>
+					<dd>Traveling by motorcycle you have a speed of %[ <code>motorcycle.total.speed</code> ]% km/h. [*] (<a href="./index.html#details">details</a>)</dd>
 				
 					<dt>Cycling:</dt>
-					<dd>Traveling (the same way) by bicycle you have a speed of [%[ <code>compute_bike.total.speed</code> ]% km/h. [*]) (<a href="./index.html#details">details</a>)</dd>
+					<dd>Traveling (the same way) by bicycle you have a speed of [%[ <code>bike.total.speed</code> ]% km/h. [*]) (<a href="./index.html#details">details</a>)</dd>
 					
 					<dt>Walking:</dt>
-					<dd>Just walking you have a speed of %[ <code>compute_walk.total.speed</code> ]% km/h. (<a href="./index.html#details">details</a>)</dd>
+					<dd>Just walking you have a speed of %[ <code>walk.total.speed</code> ]% km/h. (<a href="./index.html#details">details</a>)</dd>
 					
 					<p class="expand">Comment [+]</p>
 					<div class="comment">
@@ -116,7 +118,7 @@
 				
 				<p class="expand">Comment [+]</p>
 				<div class="comment">
-				  <p class="note">not sure about the saving the data on the server, see also the wiki - christopher.</p>
+				  <p class="note">not sure about saving the data on the server, see also the wiki - christopher.</p>
 				</div>
 				
 			</div>
