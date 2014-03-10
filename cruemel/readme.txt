@@ -1,2 +1,0 @@
-# branch directory for christopher
-
