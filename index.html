@@ -24,14 +24,19 @@
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>.</p>
         <![endif]-->
+        
+        <div id="header">
+        	<div class="container">
+           		<h1>The true speed of a car</h1>
+           	</div>
+        </div>
 
         <!-- start content  -->
-        <div id="content" class="container">
-			<h1>The true speed of a car</h1>
+        <div id="main" class="container">
 			<div id="start" class="card">
-				<h2>Startpage</h2>
-				<p>The speed of <a href="./index.html#details">Mario</a>&apos;s car is %[ <code>details.total.speed</code> ]% km/h. And what is yours ?</p>
-				<button onclick="location.href='./index.html#input'">Calculate your own speed</button>
+				<h2>Start</h2>
+				<p>The speed of <a class="link" href="./index.html#details">Mario</a>&apos;s car is <code>%[details.total.speed]%</code> km/h. And what is yours ?</p>
+				<a class="link" href="./index.html#input">[ Calculate your own speed ]</a> 
 			</div>
 			
 			<div id="input" class="card">
@@ -39,55 +44,55 @@
 				
 				<h3>Transport</h3>
 				
-				<p>You use your [? <code>select.transport.vehicle</code> ?]  to get to work.</p>
+				<p>You use your <code>%[select.transport.vehicle]%</code>  to get to work.</p>
 
 				<h3>Way</h3>
 				
-				<p>Between leaving home and reaching the workplace %[ <code>input.way.duration</code> ]% minutes pass. The ride is %[ <code>input.way.distance</code> ]% kilometers. [*]</p>
+				<p>Between leaving home and reaching the workplace <code>%[input.way.duration]%</code> minutes pass. The ride is <code>%[input.way.distance]%</code> kilometers. [*]</p>
 				
 				<h3>Expenses</h3>
 
-				<p>For a more significant computation, however, we must also consider the cost of the %[ <code>select.transport.vehicle</code> ]%. In one year you spend:</p>
+				<p>For a more significant computation, however, we must also consider the cost of the <code>%[select.transport.vehicle]%</code>. In one year you spend:</p>
 
 				<ul>
-					<li>insurance: &euro; %[ <code>input.expenses.insurance</code> ]%</li>
-					<li>tax: &euro; %[ <code>input.expenses.tax</code> ]%</li>
-					<li>maintenance: &euro; %[ <code>input.expenses.maintenance</code> ]%</li>
-					<li>other expenses (tolls, parking, etc..): &euro; %[ <code>input.expenses.other</code> ]%</li>
+					<li>insurance: &euro; <code>%[input.expenses.insurance]%</code></li>
+					<li>tax: &euro; <code>%[input.expenses.tax]%</code></li>
+					<li>maintenance: &euro; <code>%[input.expenses.maintenance]%</code></li>
+					<li>other expenses (tolls, parking, etc..): &euro; <code>%[input.expenses.other]%</code></li>
 				</ul>
 
-				<p>The %[ <code>select.transport.vehicle</code> ]% was purchased for &euro; %[ <code>input.transport.price</code> ]%. You expect to be able to use it %[ <code>input.transport.years</code> ]% years.</p>
+				<p>The <code>%[select.transport.vehicle]%</code> was purchased for &euro; <code>%[input.transport.price]%</code>. You expect to be able to use it <code>%[input.transport.years]%</code> years.</p>
 				
-				<p>The %[ <code>select.transport.vehicle</code> ]% is used for %[ <code>input.transport.usage</code> ]% % private purposes.</p>
+				<p>The <code>%[select.transport.vehicle]%</code> is used for <code>%[input.transport.usage]%</code> % private purposes.</p>
 				
-				<p class="expand">Comment [+]</p>
+				<p class="expand">Comment [ + ]</p>
 				<div class="comment">
 				 <p class="note">How would we take it in consideration? And what do you mean by "private purposes"? - loris</p>
 				 <p class="proposal">You don't use your car only to get to work and this should be taken into account to the expenses - christopher</p>
 				</div>
 				
-				<p>if car/motorcycle: One liter of fuel costs &euro; %[ <code>input.expenses.fuel</code> ]%, and the vehicle consumes %[ <code>input.transport.consumption</code> ]% liter per 100 km</p>
+				<p>if car/motorcycle: One liter of fuel costs &euro; <code>%[input.expenses.fuel]%</code>, and the vehicle consumes <code>%[input.transport.consumption]%</code> liter per 100 km</p>
 
-				<p class="expand">Comment [+]</p>
+				<p class="expand">Comment [ + ]</p>
 				<div class="comment">
 				  <p class="note">We have to think about how to deal with different currencies, fuel prices, etc - loris</p>
-				  <p class="proposal">Maybe first we should stick to the euro, but later it, should be no problem to add a currency parameter - fuel prices not necessary - christopher.</p>
+				  <p class="proposal">Maybe first we should stick to the euro, but later it should be no problem to add a currency parameter - fuel prices not necessary - christopher.</p>
 				</div>
 				
 				<h3>Time</h3>
 				
-				<p>You will drive the route to work %[ <code>input.way.times</code> ]% times a day</p>
+				<p>You will drive the route to work <code>%[input.way.times]%</code> times a day</p>
 				
-				<p>You work %[ <code>input.time.hours</code> ]% hours a day, for %[ <code>input.time.days</code> ]% days per week and %[ <code>input.time.weeks</code> ]% weeks in a year.</p>
+				<p>You work <code>%[input.time.hours]%</code> hours a day, for <code>%[input.time.days]%</code> days per week and <code>%[input.time.weeks]%</code> weeks in a year.</p>
 				
-				<p>You have a monthly salary of &euro; %[ <code>input.time.salary</code> ]%<del>, for [? <code>OUT</code> ?] hours of work</del>.</p>
+				<p>You have a monthly salary of &euro; <code>%[input.time.salary]%</code><del>, for [? <code>OUT</code> ?] hours of work</del>.</p>
 				
-				<p class="expand">Comment [+]</p>
+				<p class="expand">Comment [ + ]</p>
 				<div class="comment">
 				 <p class="note">regarding "hours of work": only few people will know how many hours they have to work a month or how many weeks a year. thus we have to offer default values or find another way to compute the hourly rate - christopher</p>
 			   </div> 
 			
-			<button onclick="location.href='./index.html#comparison'">compute</button>		
+				<p><a class="link" href="./index.html#comparison">[ Compute ]</a></p>		
 				
 			</div>
 			
@@ -96,27 +101,27 @@
 			
 				<dl>
 					<dt>Car:</dt>
-					<dd>Traveling by car you have a speed of %[ <code>car.total.speed</code> ]% km/h. [*] (<a href="./index.html#details">details</a>)</dd>
+					<dd>Traveling by car you have a speed of <code>%[ car.total.speed ]%</code> km/h. <a class="link" href="./index.html#details">[ details ]</a></dd>
 					
 					<dt>Motorcycle:</dt>
-					<dd>Traveling by motorcycle you have a speed of %[ <code>motorcycle.total.speed</code> ]% km/h. [*] (<a href="./index.html#details">details</a>)</dd>
+					<dd>Traveling the same way by motorcycle you have a speed of <code>%[motorcycle.total.speed]%</code> km/h. <a class="link" href="./index.html#details">[ details ]</a></dd>
 				
 					<dt>Cycling:</dt>
-					<dd>Traveling (the same way) by bicycle you have a speed of [%[ <code>bike.total.speed</code> ]% km/h. [*]) (<a href="./index.html#details">details</a>)</dd>
+					<dd>Traveling the same way by bicycle you have a speed of [<code>%[bike.total.speed]%</code> km/h. <a class="link" href="./index.html#details">[ details ]</a></dd>
 					
 					<dt>Walking:</dt>
-					<dd>Just walking you have a speed of %[ <code>walk.total.speed</code> ]% km/h. (<a href="./index.html#details">details</a>)</dd>
+					<dd>Just walking you have a speed of <code>%[walk.total.speed]%</code> km/h.</dd>
 					
-					<p class="expand">Comment [+]</p>
+					<p class="expand">Comment [ + ]</p>
 					<div class="comment">
 					 <p class="note">change it to public transport or add public transport? - loris</p>
 					 <p class="proposal">change, because only few people just walk to work and i think three compares a just fine, but seems like motorcycling is important in italy too - christopher</p>
 					 </div>
 				</dl>
 				
-				<button>Save your data</button>
+				[ Save data ]
 				
-				<p class="expand">Comment [+]</p>
+				<p class="expand">Comment [ + ]</p>
 				<div class="comment">
 				  <p class="note">not sure about saving the data on the server, see also the wiki - christopher.</p>
 				</div>
@@ -124,34 +129,37 @@
 			</div>
 
 			<div id="details" class="card">
-				<h2>Details (Calculation)</h2>
+				<h2>Details</h2>
 				
-				<p class="proposal">(repeat the Input? - and how?)</p>
+				<p class="expand">Comment [ + ]</p>
+				<div class="comment">
+					<p class="proposal">repeat the Input? - and how? - christopher</p>
+				</div>
 				
 				<h3>Way</h3>
 				
-				<p>The total path of the way to the workplace is %[ <code>details.total.way</code> ]% km per year [*].</p>
+				<p>The total path of the way to the workplace is <code>%[details.total.way]%</code> km per year [*].</p>
 				
 				<p><del>We can calculate the <em>door-to-door</em> speed of in a very simple way, with the classic <em>space / time</em> formula: it is [! <code>OUT</code> !] km/h. [*]</del></p>
 				
-				<p class="expand">Comment [+]</p>
+				<p class="expand">Comment [ + ]</p>
 				 <div class="comment">
 				  <p class="note">why do we need the door-to-door-speed? - christopher)</p>
-        		  <p class="note">in my original version, the idea was to show that the speed is much lower than the one seen on one's speedometer, even if you don't consider the costs involved; you have to take a long way to bypass the city center, for instance, or you park your car quite far from your destination - loris)</p>
+        		  <p class="note">in my original version, the idea was to show that the speed is much lower than the one seen on one's speedometer, even if you don't consider the costs involved; you have to take a long way to bypass the city center, for instance, or you park your car quite far from your destination - loris</p>
                   <p class="proposal">that is what the whole app is about, isn't it? But these values are already given in input.way.duration & input.way.distance - christopher</p>
                 </div>
         
 				<h3>Expenses</h3>
 				
-				<p>The person spends &euro; %[ <code>details.expenses.upkeeping</code> ]% per year for the upkeeping of the %[ <code>details.transport.vehicle</code> ]%.</p>
+				<p>The person spends &euro; <code>%[details.expenses.upkeeping]%</code> per year for the upkeeping of the <code>%[details.transport.vehicle]%</code>.</p>
 				
-				<p>if car/motorcycle: She /he also spends &euro; %[ <code>details.expenses.fuel</code>]%  each year for fuel.</p>
+				<p>if car/motorcycle: She /he also spends &euro; <code>%[details.expenses.fuel</code>]%  each year for fuel.</p>
 				
-				<p>And don&apos;t forget the vehicle itself, which costs &euro; %[ <code>details.expenses.vehicle</code> ]% each year.</p>
+				<p>And don&apos;t forget the vehicle itself, which costs &euro; <code>%[details.expenses.vehicle]%</code> each year.</p>
 				
-				<p>Thus the total expenses per year are &euro; %[ <code>details.total.expenses</code> ]%.</p>
+				<p>Thus the total expenses per year are &euro; <code>%[details.total.expenses]%</code>.</p>
 				
-				<p class="expand">Comment [+]</p>
+				<p class="expand">Comment [ + ]</p>
 				<div class="comment">
 				  <p class="note">these are the "real" costs: expenses.upkeeping, expenses.fuel &amp; expenses.vehicle - transport.price / transport.years [/ 100 * (100 - transport.usage)], correct? - christopher.</p>
 				</div>
@@ -160,34 +168,53 @@
 
 				<p>What do costs have to do with the speed?</p>
 				
-				<p>Within a year, how much time does the person spend to travel?. We have to take into consideration not only the %[ <code>details.time.way</code>]% hours on driving, but also the time the person has to work to afford the vehicle - %[ <code>details.time.work</code> ]% hours.</p>
+				<p>Within a year, how much time does the person spend to travel?. We have to take into consideration not only the <code>%[details.time.way</code>]% hours on driving, but also the time the person has to work to afford the vehicle - <code>%[details.time.work]%</code> hours.</p>
 				
-				<p>In total, it is therefore %[ <code>details.total.time</code> ]% hours.</p>
+				<p>In total, it is therefore <code>%[details.total.time]%</code> hours.</p>
 				
 				<h3>Summary</h3>
 				
-				<p><strong>The generalized velocity is: %[ <code>details.total.way</code> ]% km / %[ <code>details.total.time</code> ]% h, ie. %[ <code>details.total.speed</code> ]% km/h</strong></p>
+				<p><strong>The generalized velocity is: <code>%[details.total.way]%</code> km / <code>%[details.total.time]%</code> h, ie. <code>%[details.total.speed]%</code> km/h</strong></p>
 			
 			</div>
 			
-			
-			
-			<div id="part_05" class="card">
+			<div id="appendix" class="card">
 				<h2>Appendix *</h2>
 				
 			</div>
 		</div>
         <!-- end content  -->
+        
+         <div id="footer">
+           <div class="container">
+        	<ul>
+        		<li><a class="link" href="./index.html#start">Start</a></li>
+        		<li><a class="link" href="./index.html#input">Input</a></li>
+        		<li><a class="link" href="./index.html#comparison">Comparison</a></li>
+        		<li><a class="link" href="./index.html#details">Details</a></li>
+        		<li><a class="link" href="./index.html#appendix">Appendix</a></li>
+        	</ul>
+        	</div>
+         </div>
 
         <script src="./js/vendor/jquery-1.9.0.min.js"></script>
         <script src="./js/plugins.js"></script>
         <script src="./js/main.js"></script>
         <script>
          $(document).ready(function() {
-          var comment = $(".expand");
-          comment.click(function () {
-			$(this).next("div.comment").toggle();
-		  });
+        	var link = $(".link");
+		  	link.click(function() {
+		  		var target = $(this).attr('href');
+		  		var hash = target.indexOf("#");
+		  		var div = target.substring(hash);
+		  		var main = $("#main");
+		  		main.children().hide();
+		  		$(div).toggle();
+		  	});
+		  	var comment = $(".expand");
+		  	comment.click(function () {
+				$(this).next("div.comment").toggle();
+		  	});
 		 }); 	
         </script>
         
