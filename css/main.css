@@ -174,7 +174,16 @@ code {
 
 #footer ul li {
 	float: left;
-	margin: 1em;
+	margin: 0.9em;
+}
+
+#footer ul li a {
+	padding: 0.1em 0.2em;
+}
+
+#footer ul li.active a {
+	color: #ffffff;
+	background-color: #666666;
 }
 
 #input, #comparison, #details, #appendix {

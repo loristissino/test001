@@ -44,11 +44,11 @@
 				
 				<h3>Transport</h3>
 				
-				<p>You use your <code>%[select.transport.vehicle]%</code>  to get to work.</p>
+				<p>You use your <code>%[select.transport.vehicle]%</code> to get to work.</p>
 
 				<h3>Way</h3>
 				
-				<p>Between leaving home and reaching the workplace <code>%[input.way.duration]%</code> minutes pass. The ride is <code>%[input.way.distance]%</code> kilometers. [*]</p>
+				<p>Between leaving home and reaching the workplace <code>%[input.way.duration]%</code> minutes pass. The ride is <code>%[input.way.distance]%</code> kilometers. <a class="link" href="./index.html#appendix">[*]</a></p>
 				
 				<h3>Expenses</h3>
 
@@ -101,7 +101,7 @@
 			
 				<dl>
 					<dt>Car:</dt>
-					<dd>Traveling by car you have a speed of <code>%[ car.total.speed ]%</code> km/h. <a class="link" href="./index.html#details">[ details ]</a></dd>
+					<dd>Traveling by car you have a speed of <code>%[car.total.speed]%</code> km/h. <a class="link" href="./index.html#details">[ details ]</a></dd>
 					
 					<dt>Motorcycle:</dt>
 					<dd>Traveling the same way by motorcycle you have a speed of <code>%[motorcycle.total.speed]%</code> km/h. <a class="link" href="./index.html#details">[ details ]</a></dd>
@@ -188,11 +188,11 @@
          <div id="footer">
            <div class="container">
         	<ul>
-        		<li><a class="link" href="./index.html#start">Start</a></li>
-        		<li><a class="link" href="./index.html#input">Input</a></li>
-        		<li><a class="link" href="./index.html#comparison">Comparison</a></li>
-        		<li><a class="link" href="./index.html#details">Details</a></li>
-        		<li><a class="link" href="./index.html#appendix">Appendix</a></li>
+        		<li title="start" class="active"><a class="link" href="./index.html#start">Start</a></li>
+        		<li title="input"><a class="link" href="./index.html#input">Input</a></li>
+        		<li title="comparison"><a class="link" href="./index.html#comparison">Comparison</a></li>
+        		<li title="details"><a class="link" href="./index.html#details">Details</a></li>
+        		<li title="appendix"><a class="link" href="./index.html#appendix">Appendix</a></li>
         	</ul>
         	</div>
          </div>
@@ -206,10 +206,22 @@
 		  	link.click(function() {
 		  		var target = $(this).attr('href');
 		  		var hash = target.indexOf("#");
-		  		var div = target.substring(hash);
+		  		var card = target.substring(hash);
 		  		var main = $("#main");
+		  		var list = $("#footer div ul");
+		  		var items = list.children();
+		  		var tab = items.filter(function(i) {
+		  			if ($(this).attr('title') === card.substring(1)) {
+		  				$(this).removeClass("passive");
+		  				$(this).addClass("active");
+		  			}
+		  			else {
+		  				$(this).removeClass("active");
+		  				$(this).addClass("passive");
+					}
+				});
 		  		main.children().hide();
-		  		$(div).toggle();
+		  		$(card).toggle();
 		  	});
 		  	var comment = $(".expand");
 		  	comment.click(function () {
