@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <!--[if lt IE 7]>      
 	<html class="no-js lt-ie9 lt-ie8 lt-ie7"> 
-<![endif]-->
+	<![endif]-->
 <!--[if IE 7]>         
 	<html class="no-js lt-ie9 lt-ie8"> 
-<![endif]-->
+	<![endif]-->
 <!--[if IE 8]>         
 	<html class="no-js lt-ie9"> 
-<![endif]-->
+	<![endif]-->
 <!--[if gt IE 8]>
-	<!--> 
 	<html class="no-js"> 
-<!--<![endif]-->
+	<![endif]-->
+<!-- [endif]-->
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -131,6 +131,11 @@
 			<div id="details" class="card">
 				<h2>Details</h2>
 				
+				<div id="data">
+					<ul></ul>
+					<button>Example data for a car, eg. Mario</button>
+				</div>
+				
 				<p class="expand">Comment [ + ]</p>
 				<div class="comment">
 					<p class="proposal">repeat the Input? - and how? - christopher</p>
@@ -227,6 +232,25 @@
 		  	comment.click(function () {
 				$(this).next("div.comment").toggle();
 		  	});
+		  	var data = $("#data ul");
+		  	var button = $("#data button");
+		  	button.click(function () {
+		  		data.empty();
+		  		$.getJSON('./data/transport.json', function(e) {
+		  			$.each(e, function(i,x) {
+		  				if (i === "car") {
+		  					$.each(x, function(k,p) {
+		  						if (k === "transport") {
+		  							$.each(p, function(n,v) {
+		  								data.append($("<li>").append(k, ".", n, ": ").append(v));
+		  							});
+		  						}
+		  					});
+		  				}
+		  			});
+		  		});
+		  	});
+		  	
 		 }); 	
         </script>
         

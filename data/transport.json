@@ -1,0 +1,99 @@
+{
+    "car": {
+		"person": {
+      		"name": "mario",
+      		"label": "his",
+      		"salutatory": "he"
+      	},
+       	"transport": {
+      		"vehicle": "car",
+      		"price": 20000,
+      		"years": 5,
+      		"usage": 50,
+      		"consumption": 5
+      	},
+      	"expenses": {
+      		"fuel": 1.5,
+      		"insurance": 400,
+      		"tax": 200,
+      		"maintenance": 500,
+      		"other": 0
+      	},
+      	"way": {
+      		"distance": 20,
+      		"duration": 30,
+      		"times": 2
+      	},
+      	"time": {
+      		"weeks": 42,
+      		"days": 4,
+      		"hours": 8,
+      		"salary": 4000
+      	}
+    },
+    "bike": {
+			"person": {
+				"name": "luigi",
+      			"label": "his",
+      			"salutatory": "he"
+      		},
+       		"transport": {
+      			"vehicle": "bike",
+      			"price": 2000,
+      			"years": 5,
+      			"usage": 50,
+      			"consumption": 0
+      		},
+      		"expenses": {
+      			"fuel": 0,
+      			"insurance": 200,
+      			"tax": 0,
+      			"maintenance": 30,
+      			"other": 0
+      		},
+      		"way": {
+      			"distance": 10,
+      			"duration": 30,
+      			"times": 2
+      		},
+      		"time": {
+      			"weeks": 42,
+				"days": 4,
+      			"hours": 8,
+      			"salary": 3000
+      		}
+    },
+    "public": {
+			"person": {
+      			"name": "daisy",
+      			"label": "her",
+      			"salutatory": "she"
+      		},
+       		"transport": {
+      						"vehicle": "public",
+      						"price": 0,
+      						"years": 0,
+      						"usage": 0,
+      						"consumption": 0
+      					} ,
+      		"expenses": {
+      						"fuel": 0,
+      						"insurance": 0,
+      						"tax": 0,
+      						"maintenance": 0,
+      						"other": 500
+      					} ,
+      		"way": {
+      			"distance": 15,
+      			"duration": 60,
+      			"times": 2
+      		},
+      		"time": {
+      			"weeks": 42,
+      			"days": 4,
+      			"hours": 8,
+      			"salary": 2000
+      		}
+      }
+    		
+}
