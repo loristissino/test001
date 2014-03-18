@@ -152,11 +152,21 @@ textarea {
 }
 
 .expand {
-	color: #333333;
 	margin: 0;
 	text-align: right;
 	cursor: pointer;
-	color: blue;
+}
+
+.expand.view {
+	color: lightblue;
+}
+
+.expand.model {
+	color: #ADBD6C;
+}
+
+.expand.controller {
+	color: #CC9933;
 }
 
 .comment {
@@ -167,17 +177,12 @@ textarea {
 	
 }
 
-.new {
-	color: #ADBD6C;
+.proposal {
+	color: #CC9933;
 }
 
 .note {
 	color: #B24D2E;
-	font-style: italic;
-}
-
-.proposal {
-	color: #CC9933;
 }
 
 code {
@@ -202,8 +207,16 @@ code {
 	background-color: #666666;
 }
 
-#input, #comparison, #details, #appendix {
+#details, #compare, #appendix {
 	display: none;
+}
+
+.front {
+ 	display: block;
+}
+ 
+ .back {
+  display: none;
 }
 
 /* ==========================================================================
