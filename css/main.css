@@ -151,6 +151,11 @@ textarea {
 	border: 1px solid #333333;
 }
 
+.action p {
+	cursor: pointer;
+	color: blue;
+}
+
 .expand {
 	margin: 0;
 	text-align: right;
