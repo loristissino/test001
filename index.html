@@ -29,6 +29,9 @@
         	<div class="container">
            		<h1>The true speed of a car</h1>
            	</div>
+           	<div class="top">
+           		<a class="link" href="./index.html#settings">[Settings]</a>
+           	</div>	
         </div>
 
         <!-- start content  -->
@@ -36,11 +39,10 @@
 			 
 			<div id="start" class="card">
 				<h2>Start</h2>
-				<div class="panel">
+				<div class="box">
 					<div class="action">
-						<h3>Mario</h3>
-						[image of car]
-						<p><a class="link" href="./index.html#details">Mario has a speed of <code>%[details.total.speed]%</code> km/h.</a></p>
+						<p><a class="link" href="./index.html#details">[image of car]</a></p>
+						<span><b>Mario has a speed of <code>%[details.total.speed]%</code> km/h.</b></span>
 					</div>
 				</div>
 				<p class="expand view">Comment [ + ]</p>
@@ -52,151 +54,152 @@
 			<div id="details" class="card">
 				<h2>Details</h2>
 				
-				<div id="data">
+				<div id="data" class="box">
 					<ul></ul>
 					<button>Example data for a car, eg. Mario</button>
+				
+					<p class="expand view">Comment [ + ]</p>
+					<div class="comment">
+						<p class="proposal">repeat the input ... and how? both, details and compare view are too large for mobile screens - christopher</p>
+					</div>
 				</div>
 				
-				<p class="expand view">Comment [ + ]</p>
-				<div class="comment">
-					<p class="proposal">repeat the input ... and how? both, details and compare view are too large for mobile screens - christopher</p>
-				</div>
-				
-				<div class="panel">
-				 <h3>Way</h3>
-				 <p>The total path of the way to the workplace is <code>%[details.total.way]%</code> km per year <a class="link" href="./index.html#appendix">[*]</a>.</p>
-				 <p><del>We can calculate the <em>door-to-door</em> speed of in a very simple way, with the classic <em>space / time</em> formula: it is [! <code>OUT</code> !] km/h. [*]</del></p>
-				 <p class="expand model">Comment [ + ]</p>
-				 <div class="comment">
-				  <p class="proposal">why do we need the door-to-door-speed? - christopher</p>
-        		  <p class="note">in my original version, the idea was to show that the speed is much lower than the one seen on one's speedometer, even if you don't consider the costs involved; you have to take a long way to bypass the city center, for instance, or you park your car quite far from your destination - loris</p>
-                  <p class="proposal">that is what the whole app is about, isn't it? But these values are already given in input.way.duration & input.way.distance - christopher</p>
-                 </div>
+				<div class="box">
+				 	<h3>Way</h3>
+				 	<p>The total path of the way to the workplace is <code>%[details.total.way]%</code> km per year <a class="link" href="./index.html#appendix">[*]</a>.</p>
+				 	<p><del>We can calculate the <em>door-to-door</em> speed of in a very simple way, with the classic <em>space / time</em> formula: it is [! <code>OUT</code> !] km/h. [*]</del></p>
+				 	<p class="expand model">Comment [ + ]</p>
+				 	<div class="comment">
+				  		<p class="proposal">why do we need the door-to-door-speed? - christopher</p>
+        		  		<p class="note">in my original version, the idea was to show that the speed is much lower than the one seen on one's speedometer, even if you don't consider the costs involved; you have to take a long way to bypass the city center, for instance, or you park your car quite far from your destination - loris</p>
+                  		<p class="proposal">that is what the whole app is about, isn't it? But these values are already given in input.way.duration & input.way.distance - christopher</p>
+                 	</div>
                 </div>
         
-				<div class="panel">
-				 <h3>Money</h3>
-				 <p>The person spends &euro; <code>%[details.expenses.upkeeping]%</code> per year for the upkeeping of the <code>%[details.transport.vehicle]%</code>.</p>
-				 <p><code>if car/motorcycle:</code><br>
+				<div class="box">
+				 	<h3>Money</h3>
+				 	<p>The person spends &euro; <code>%[details.expenses.upkeeping]%</code> per year for the upkeeping of the <code>%[details.transport.vehicle]%</code>.</p>
+				 	<p><code>if car/motorcycle:</code><br>
 				 She /he also spends &euro; <code>%[details.expenses.fuel</code>]%  each year for fuel.</p>
-				 <p>And don&apos;t forget the vehicle itself, which costs &euro; <code>%[details.expenses.vehicle]%</code> each year.</p>
-				 <p>Thus the total expenses per year are &euro; <code>%[details.total.expenses]%</code>.</p>
-				 <p class="expand model">Comment [ + ]</p>
-				 <div class="comment">
-				  <p class="note">these are the "real" costs: expenses.upkeeping, expenses.fuel &amp; expenses.vehicle - transport.price / transport.years [/ 100 * (100 - transport.usage)], correct? - christopher.</p>
-				 </div>
+				 	<p>And don&apos;t forget the vehicle itself, which costs &euro; <code>%[details.expenses.vehicle]%</code> each year.</p>
+				 	<p>Thus the total expenses per year are &euro; <code>%[details.total.expenses]%</code>.</p>
+				 	<p class="expand model">Comment [ + ]</p>
+				 	<div class="comment">
+				  		<p class="note">these are the "real" costs: expenses.upkeeping, expenses.fuel &amp; expenses.vehicle - transport.price / transport.years [/ 100 * (100 - transport.usage)], correct? - christopher.</p>
+				 	</div>
 				</div>
 				
-				<div class="panel">
-				 <h3>Time</h3>
-				 <p>What do costs have to do with the speed?</p>
-				 <p>Within a year, how much time does the person spend to travel?. We have to take into consideration not only the <code>%[details.time.way</code>]% hours on driving, but also the time the person has to work to afford the vehicle - <code>%[details.time.work]%</code> hours.</p>
-				 <p>In total, it is therefore <code>%[details.total.time]%</code> hours.</p>
+				<div class="box">
+				 	<h3>Time</h3>
+				 	<p>What do costs have to do with the speed?</p>
+				 	<p>Within a year, how much time does the person spend to travel?. We have to take into consideration not only the <code>%[details.time.way</code>]% hours on driving, but also the time the person has to work to afford the vehicle - <code>%[details.time.work]%</code> hours.</p>
+				 	<p>In total, it is therefore <code>%[details.total.time]%</code> hours.</p>
 				</div>
 				
-				<div class="panel">
-				 <h3>Summary</h3>
-				 <p><strong>The generalized velocity is: <code>%[details.total.way]%</code> km / <code>%[details.total.time]%</code> h, ie. <code>%[details.total.speed]%</code> km/h</strong></p>
+				<div class="box">
+				 	<h3>Summary</h3>
+				 	<p><strong>The generalized velocity is: <code>%[details.total.way]%</code> km / <code>%[details.total.time]%</code> h, ie. <code>%[details.total.speed]%</code> km/h</strong></p>
 				</div>
 				
 				<div class="action">
 					<span>And you? What is your own speed?</span>
-					<p>[<a class="link" href="./index.html#compare">Calculate</a>]</p>
+					<p>[<a class="link" href="./index.html#compare">Compare</a>]</p>
 				</div>
 			
 			</div>
 			
 			<div id="compare" class="card">
-				<div id="input" class="front">
+				<div id="input" class="front panel">
 					<h2>Input</h2>
 					<p class="expand view">Comment [ + ]</p>
 					<div class="comment">
-				  <p class="proposal">design this view as a wizard, eg. split it apart in different panels? - christopher.</p>
-				</div>
+				  		<p class="proposal">design this view as a wizard, eg. split it apart in different panels? - christopher.</p>
+					</div>
 				
-					<div class="panel">
-				 <h3>Way</h3>
-				 <p>Between leaving home and reaching the workplace <code>%[input.way.duration]%</code> minutes pass. The ride is <code>%[input.way.distance]%</code> kilometers. <a class="link" href="./index.html#appendix">[*]</a></p>
-				 <p class="expand controller">Comment [ + ]</p>
-				 <div class="comment">
-				   <p class="proposal">the route, eg. the <code>input.way.distance</code> can be computed, with the help of a map to display, as already talked about. this would be then the asked foreign apis.</p>
-				 </div>
-				 <p>You will drive the route to work <code>%[input.way.times]%</code> times a day</p>
-				</div>
+					<div class="box">
+				 		<h3>Way</h3>
+				 		<p>Between leaving home and reaching the workplace <code>%[input.way.duration]%</code> minutes pass. The ride is <code>%[input.way.distance]%</code> kilometers. <a class="link" href="./index.html#appendix">[*]</a></p>
+				 		<p class="expand controller">Comment [ + ]</p>
+				 		<div class="comment">
+				   			<p class="proposal">the route, eg. the <code>input.way.distance</code> can be computed, with the help of a map to display, as already talked about. this would be then the asked foreign apis.</p>
+				 		</div>
+				 		<p>You will drive the route to work <code>%[input.way.times]%</code> times a day</p>
+					</div>
 				
-					<div class="panel">
-				 <h3>Vehicle</h3>
-				 <p class="expand view">Comment [ + ]</p>
-				 <div class="comment">
-				  <p class="proposal">to find some &quot;simple&quot; names for the single parts/panels, see also start page - christopher.</p>
-				 </div>
-				 <p>You use your <code>%[select.transport.vehicle]%</code> to get to work.</p>
-				 <p>The <code>%[select.transport.vehicle]%</code> was purchased for &euro; <code>%[input.transport.price]%</code>. You expect to be able to use it <code>%[input.transport.years]%</code> years.</p>
-				 <p>The <code>%[select.transport.vehicle]%</code> is used for <code>%[input.transport.usage]%</code> % private purposes.</p>
-				 <p class="expand model">Comment [ + ]</p>
-				 <div class="comment">
-				  <p class="note">How would we take it in consideration? And what do you mean by "private purposes"? - loris</p>
-				  <p class="proposal">You don't use your car only to get to work and this should be taken into account to the expenses - christopher</p>
-				 </div>
-				</div>
+					<div class="box">
+				 		<h3>Vehicle</h3>
+				 		<p class="expand view">Comment [ + ]</p>
+				 		<div class="comment">
+				  			<p class="proposal">to find some &quot;simple&quot; names for the single parts/panels, see also start page - christopher.</p>
+				 		</div>
+				 		<p>You use your <code>%[select.transport.vehicle]%</code> to get to work.</p>
+				 		<p>The <code>%[select.transport.vehicle]%</code> was purchased for &euro; <code>%[input.transport.price]%</code>. You expect to be able to use it <code>%[input.transport.years]%</code> years.</p>
+				 		<p>The <code>%[select.transport.vehicle]%</code> is used for <code>%[input.transport.usage]%</code> % private purposes.</p>
+				 		<p class="expand model">Comment [ + ]</p>
+				 		<div class="comment">
+				  			<p class="note">How would we take it in consideration? And what do you mean by "private purposes"? - loris</p>
+				  			<p class="proposal">You don't use your car only to get to work and this should be taken into account to the expenses - christopher</p>
+				 		</div>
+					</div>
 				
-					<div class="panel">
-				 <h3>Money</h3>
-				 <p><code>if car/motorcycle:</code><br>
-				 One liter of fuel costs &euro; <code>%[input.expenses.fuel]%</code>, and the vehicle consumes <code>%[input.transport.consumption]%</code> liter per 100 km</p>
-				 <p>For a more significant computation, however, we must also consider the cost of the <code>%[select.transport.vehicle]%</code>. In one year you spend:</p>
-				 <ul>
-					<li>insurance: &euro; <code>%[input.expenses.insurance]%</code></li>
-					<li>tax: &euro; <code>%[input.expenses.tax]%</code></li>
-					<li>maintenance: &euro; <code>%[input.expenses.maintenance]%</code></li>
-					<li>other expenses (tolls, parking, etc..): &euro; <code>%[input.expenses.other]%</code></li>
-				 </ul>
-				 <p class="expand model">Comment [ + ]</p>
-				 <div class="comment">
-				  <p class="note">We have to think about how to deal with different currencies, fuel prices, etc - loris</p>
-				  <p class="proposal">Maybe first we should stick to the euro, but later it should be no problem to add a currency parameter - fuel prices not necessary - christopher.</p>
-				 </div>
-				</div>
+					<div class="box">
+				 		<h3>Money</h3>
+				 		<p><code>if car/motorcycle:</code><br>
+				 		One liter of fuel costs &euro; <code>%[input.expenses.fuel]%</code>, and the vehicle consumes <code>%[input.transport.consumption]%</code> liter per 100 km</p>
+				 		<p>For a more significant computation, however, we must also consider the cost of the <code>%[select.transport.vehicle]%</code>. In one year you spend:</p>
+				 		<ul>
+							<li>insurance: &euro; <code>%[input.expenses.insurance]%</code></li>
+							<li>tax: &euro; <code>%[input.expenses.tax]%</code></li>
+							<li>maintenance: &euro; <code>%[input.expenses.maintenance]%</code></li>
+							<li>other expenses (tolls, parking, etc..): &euro; <code>%[input.expenses.other]%</code></li>
+				 		</ul>
+				 		<p class="expand model">Comment [ + ]</p>
+				 		<div class="comment">
+				  			<p class="note">We have to think about how to deal with different currencies, fuel prices, etc - loris</p>
+				  			<p class="proposal">Maybe first we should stick to the euro, but later it should be no problem to add a currency parameter - fuel prices not necessary - christopher.</p>
+				 		</div>
+					</div>
 				
-					<div class="panel">
-				 <h3>Time</h3>
-				 <p>You work <code>%[input.time.hours]%</code> hours a day, for <code>%[input.time.days]%</code> days per week and <code>%[input.time.weeks]%</code> weeks in a year.</p>
-				 <p>You have a monthly salary of &euro; <code>%[input.time.salary]%</code><del>, for [? <code>OUT</code> ?] hours of work</del>.</p>
-				 <p class="expand model">Comment [ + ]</p>
-				 <div class="comment">
-				  <p class="note">regarding "hours of work": only few people will know how many hours they have to work a month or how many weeks a year. thus we have to offer default values or find another way to compute the hourly rate - christopher</p>
-			      </div>
-			    </div> 
+					<div class="box">
+				 		<h3>Time</h3>
+				 		<p>You work <code>%[input.time.hours]%</code> hours a day, for <code>%[input.time.days]%</code> days per week and <code>%[input.time.weeks]%</code> weeks in a year.</p>
+				 		<p>You have a monthly salary of &euro; <code>%[input.time.salary]%</code><del>, for [? <code>OUT</code> ?] hours of work</del>.</p>
+				 		<p class="expand model">Comment [ + ]</p>
+				 		<div class="comment">
+				  			<p class="note">regarding "hours of work": only few people will know how many hours they have to work a month or how many weeks a year. thus we have to offer default values or find another way to compute the hourly rate - christopher</p>
+			      		</div>
+			    	</div> 
+			    	
 				</div>
 				
 				<div class="action flip">
 				 	<p>[ Compute ]</p>
 				</div>
 				
-				<div id="output" class="back">
+				<div id="output" class="back panel">
 					<h2>Output</h2>
 			
 					<dl>
-					<dt>Car:</dt>
-					<dd>Traveling by car you have a speed of <code>%[car.total.speed]%</code> km/h. <a class="link" href="./index.html#details">[ details ]</a></dd>
+						<dt>Car:</dt>
+						<dd>Traveling by car you have a speed of <code>%[car.total.speed]%</code> km/h. <a class="link" href="./index.html#details">[ details ]</a></dd>
 					
-					<dt>Motorcycle:</dt>
-					<dd>Traveling the same way by motorcycle you have a speed of <code>%[motorcycle.total.speed]%</code> km/h. <a class="link" href="./index.html#details">[ details ]</a></dd>
+						<dt>Motorcycle:</dt>
+						<dd>Traveling the same way by motorcycle you have a speed of <code>%[motorcycle.total.speed]%</code> km/h. <a class="link" href="./index.html#details">[ details ]</a></dd>
 				
-					<dt>Cycling:</dt>
-					<dd>Traveling the same way by bicycle you have a speed of [<code>%[bike.total.speed]%</code> km/h. <a class="link" href="./index.html#details">[ details ]</a></dd>
+						<dt>Cycling:</dt>
+						<dd>Traveling the same way by bicycle you have a speed of <code>%[bike.total.speed]%</code> km/h. <a class="link" href="./index.html#details">[ details ]</a></dd>
 					
-					<dt>Walking:</dt>
-					<dd>Just walking you have a speed of <code>%[walk.total.speed]%</code> km/h.</dd>
+						<dt>Walking:</dt>
+						<dd>Just walking you have a speed of <code>%[walk.total.speed]%</code> km/h.</dd>
+					</dl>
 					
 					<p class="expand model">Comment [ + ]</p>
 					<div class="comment">
-					 <p class="note">change it to public transport or add public transport? - loris</p>
-					 <p class="proposal">change, because only few people just walk to work and i think three compares a just fine, but seems like motorcycling is important in italy too - christopher</p>
-					 </div>
-				</dl>
+					 	<p class="note">change it to public transport or add public transport? - loris</p>
+					 	<p class="proposal">change, because only few people just walk to work and i think three compares a just fine, but seems like motorcycling is important in italy too - christopher</p>
+					</div>
 				
-					[ Save data ]
+					<p>[ Save data ]</p>
 				
 					<p class="expand model">Comment [ + ]</p>
 					<div class="comment">
@@ -206,26 +209,60 @@
 				
 			</div>
 			
+			<div id="settings" class="card">
+				<h2>Units</h2>
+				<form>
+					<fieldset>
+						<label for="speed">Velocity: </label>
+						<select name="speed">
+							<option value="kmh">km/h</option>
+      						<option value="miles">miles</option>
+						</select>
+					</fieldset>
+					<p>
+					<fieldset>
+						<label for="money">Currency: </label>
+						<select name="money">
+							<option value="euro">Euro</option>
+      						<option value="dollar">Dollar</option>
+						</select>
+					</fieldset>
+					<p>
+					<fieldset>
+						<label for="time">Period: </label>
+						<select name="time">
+							<option value="month">Month</option>
+      						<option selected value="year">Year</option>
+						</select>
+					</fieldset>
+				</form>
+				<p class="expand model">Comment [ + ]</p>
+				<div class="comment">
+				  	<p class="proposal">as there different speeds and currencies possible, also the period in which all the calculation is done could be changeable. see also compare, time - christopher</p>
+                 </div>
+			</div>
+			
 			<div id="appendix" class="card">
 				<h2>Appendix *</h2>
 				
 				<p class="expand view">Comment [ + ]</p>
 				<div class="comment">
-				  <p class="proposal">This should contain explanations about the different parameters as well as a help section (and information about the makers ?) - christopher.</p>
+					<p class="proposal">This should contain explanations about the different parameters (which?) as well as a help section (and information about the makers ?) - christopher.</p>
 				</div>
 				
 			</div>
+			
 		</div>
         <!-- end content  -->
         
         <div id="footer">
            <div class="container">
-        	<ul>
-        		<li title="start" class="active"><a class="link" href="./index.html#start">Start</a></li>
-        		<li title="details"><a class="link" href="./index.html#details">Details</a></li>
-        		<li title="compare"><a class="link" href="./index.html#compare">Compare</a></li>
-        		<li title="appendix"><a class="link" href="./index.html#appendix">About</a></li>
-        	</ul>
+        		<ul>
+        			<li title="start" class="active"><a class="link" href="./index.html#start">Start</a></li>
+        			<li title="details"><a class="link" href="./index.html#details">Details</a></li>
+        			<li title="compare"><a class="link" href="./index.html#compare">Compare</a></li>
+        			<li title="appendix"><a class="link" href="./index.html#appendix">About</a></li>
+        		</ul>
         	</div>
          </div>
 

@@ -105,6 +105,13 @@ textarea {
 	z-index: 200;
 }
 
+.top {
+	position: relative;
+	float: right;
+	padding: 1em 2em;
+	margin: -5em auto;
+}
+
 #main {
 	position: relative;
 	margin: 10em auto 8em auto;
@@ -212,7 +219,7 @@ code {
 	background-color: #666666;
 }
 
-#details, #compare, #appendix {
+#details, #compare, #settings, #appendix {
 	display: none;
 }
 
