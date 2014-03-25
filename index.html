@@ -42,7 +42,7 @@
 				<div class="box">
 					<div class="action">
 						<p><a class="link" href="./index.html#details">[image of car]</a></p>
-						<span><b>Mario has a speed of <code>%[details.total.speed]%</code> km/h.</b></span>
+						<span><b>Mario has a speed of <code>%[details.speed]%</code> km/h.</b></span>
 					</div>
 				</div>
 				<p class="expand view">Comment [ + ]</p>
@@ -61,46 +61,42 @@
 				
 				<div class="box">
 				 	<h3>Way</h3>
-				 	<p>The total path of the way to the workplace is <code>%[details.total.way]%</code> km per year <a class="link" href="./index.html#appendix">[*]</a>.</p>
+				 	<p>The total path of the way to the workplace is <code>%[details.way.total]%</code> km per year <a class="link" href="./index.html#appendix">[*]</a>.</p>
 				 	<p><del>We can calculate the <em>door-to-door</em> speed of in a very simple way, with the classic <em>space / time</em> formula: it is [! <code>OUT</code> !] km/h. [*]</del></p>
 				 	
 				 	<p><a class="input" href="./index.html#way">[ Input ]</a></p>
 				 	
 				 	<p class="expand view">Comment [ + ]</p>
 				 	<div class="comment">
-                  		<p class="note">i don't think the &qout;door-to-door&qout; is useful and its distracting the user from the real apps message - christopher</p>
+                  		<p class="note">i think the &quot;door-to-door&quot; speed is distracting the user from the real apps message (and will not help the bike too) - christopher</p>
                       <p class="proposal">Not really the same. It could be interesting to make people think that they see, for instance, 60 km/h in their speedometer -- but if they take into consideration also the time they spend looking for the parking place, walking from the parking lot to the destination, etc. their speed is, say, 25 km/h. And if they consider also the costs involved, and the time they spend to earn the money to pay the cose, their speed is 7 km/h. - Loris</p>
                  	</div>
                 </div>
         
 				<div class="box">
 				 	<h3>Money</h3>
-				 	<p>The person spends &euro; <code>%[details.expenses.upkeeping]%</code> per year for the upkeeping of the <code>%[details.transport.vehicle]%</code>.</p>
+				 	<p>The person spends &euro; <code>%[details.expenses.upkeeping]%</code> per year for the upkeeping of the <code>%[details.vehicle.type]%</code>.</p>
 				 	<p><code>if car/motorcycle:</code><br>
 				 She /he also spends &euro; <code>%[details.expenses.fuel</code>]%  each year for fuel.</p>
 				 	<p>And don&apos;t forget the vehicle itself, which costs &euro; <code>%[details.expenses.vehicle]%</code> each year.</p>
-				 	<p>Thus the total expenses per year are &euro; <code>%[details.total.expenses]%</code>.</p>
+				 	<p>Thus the total expenses per year are &euro; <code>%[details.expenses.total]%</code>.</p>
 				 	
 				 	<p><a class="input" href="./index.html#money">[ Input ]</a></p>
 				 	
-				 	<p class="expand model">Comment [ + ]</p>
-				 	<div class="comment">
-				  		<p class="note">these are the "real" costs: expenses.upkeeping, expenses.fuel &amp; expenses.vehicle - transport.price / transport.years [/ 100 * (100 - transport.usage)], correct? - christopher.</p>
-				 	</div>
 				</div>
 				
 				<div class="box">
 				 	<h3>Time</h3>
 				 	<p>What do costs have to do with the speed?</p>
 				 	<p>Within a year, how much time does the person spend to travel?. We have to take into consideration not only the <code>%[details.time.way</code>]% hours on driving, but also the time the person has to work to afford the vehicle - <code>%[details.time.work]%</code> hours.</p>
-				 	<p>In total, it is therefore <code>%[details.total.time]%</code> hours.</p>
+				 	<p>In total, it is therefore <code>%[details.time.total]%</code> hours.</p>
 				 	<p><a class="input" href="./index.html#time">[ Input ]</a></p>
 				 	
 				</div>
 				
 				<div class="box">
 				 	<h3>Summary</h3>
-				 	<p><strong>The generalized velocity is: <code>%[details.total.way]%</code> km / <code>%[details.total.time]%</code> h, ie. <code>%[details.total.speed]%</code> km/h</strong></p>
+				 	<p><strong>The generalized velocity is: <code>%[details.way.total]%</code> km / <code>%[details.time.total]%</code> h, ie. <code>%[details.speed]%</code> km/h</strong></p>
 				</div>
 				
 				<div class="action">
@@ -132,39 +128,30 @@
 				 		<h3>Money</h3>
 				 		<p class="expand view">Comment [ + ]</p>
 				 		<div class="comment">
-				  			<p class="proposal">to find some &quot;simple&quot; names for the single parts/panels, see also start page - christopher.</p>
+				  			<p class="proposal">still searching for some simple &amp; selfdiscribing names, especially for the tabs/views - christopher.</p>
 				 		</div>
-				 		<p>You use your <code>%[select.transport.vehicle]%</code> to get to work.</p>
-				 		<p>The <code>%[select.transport.vehicle]%</code> was purchased for &euro; <code>%[input.transport.price]%</code>. You expect to be able to use it <code>%[input.transport.years]%</code> years.</p>
-				 		<p>The <code>%[select.transport.vehicle]%</code> is used for <code>%[input.transport.usage]%</code> % private purposes.</p>
-				 		<p class="expand model">Comment [ + ]</p>
-				 		<div class="comment">
-				  			<p class="note">How would we take it in consideration? And what do you mean by "private purposes"? - loris</p>
-				  			<p class="proposal">You don't use your car only to get to work and this should be taken into account to the expenses - christopher</p>
-				 		</div>
+				 		<p>You use your <code>%[input.vehicle.type]%</code> to get to work.</p>
+				 		<p>The <code>%[input.vehicle.type]%</code> was purchased for &euro; <code>%[input.vehicle.price]%</code>. You expect to be able to use it <code>%[input.vehicle.years]%</code> years.</p>
+				 		<p>The <code>%[select.transport.vehicle]%</code> is used for <code>%[input.vehicle.usage]%</code> % private purposes.</p>
+				 		
 				 		<p><code>if car/motorcycle:</code><br>
-				 		One liter of fuel costs &euro; <code>%[input.expenses.fuel]%</code>, and the vehicle consumes <code>%[input.transport.consumption]%</code> liter per 100 km</p>
-				 		<p>For a more significant computation, however, we must also consider the cost of the <code>%[select.transport.vehicle]%</code>. In one year you spend:</p>
+				 		One liter of fuel costs &euro; <code>%[input.expenses.fuel]%</code>, and the vehicle consumes <code>%[input.vehicle.consumption]%</code> liter per 100 km</p>
+				 		<p>For a more significant computation, however, we must also consider the cost of the <code>%[input.vehicle.type]%</code>. In one year you spend:</p>
 				 		<ul>
 							<li>insurance: &euro; <code>%[input.expenses.insurance]%</code></li>
 							<li>tax: &euro; <code>%[input.expenses.tax]%</code></li>
 							<li>maintenance: &euro; <code>%[input.expenses.maintenance]%</code></li>
 							<li>other expenses (tolls, parking, etc..): &euro; <code>%[input.expenses.other]%</code></li>
 				 		</ul>
-				 		<p class="expand model">Comment [ + ]</p>
-				 		<div class="comment">
-				  			<p class="note">We have to think about how to deal with different currencies, fuel prices, etc - loris</p>
-				  			<p class="proposal">Maybe first we should stick to the euro, but later it should be no problem to add a currency parameter - fuel prices not necessary - christopher.</p>
-				 		</div>
 					</div>
 				
 					<div id="time" class="data">
 				 		<h3>Time</h3>
-				 		<p>You work <code>%[input.time.hours]%</code> hours a day, for <code>%[input.time.days]%</code> days per week and <code>%[input.time.weeks]%</code> weeks in a year.</p>
-				 		<p>You have a monthly salary of &euro; <code>%[input.time.salary]%</code><del>, for [? <code>OUT</code> ?] hours of work</del>.</p>
+				 		<p>You work <code>%[input.time.hours]%</code> hours a day, for <code>%[input.time.days]%</code> days a year.</p>
+				 		<p>You have a monthly salary of &euro; <code>%[input.time.salary]%</code>.</p>
 				 		<p class="expand model">Comment [ + ]</p>
 				 		<div class="comment">
-				  			<p class="note">regarding "hours of work": only few people will know how many hours they have to work a month or how many weeks a year. thus we have to offer default values or find another way to compute the hourly rate - christopher</p>
+				  			<p class="note">not sure if everybody knows, who many days, she/he works a year. we can also make the hole calculation based on a month by default. which are the custom parameters in italy? - christopher</p>
 			      		</div>
 			    	</div> 
 			    	
@@ -212,18 +199,27 @@
 				<h2>Units</h2>
 				<form>
 					<fieldset>
-						<label for="speed">Velocity: </label>
-						<select name="speed">
-							<option value="kmh">km/h</option>
+						<label for="way">Distance: </label>
+						<select name="way">
+							<option value="km">km</option>
       						<option value="miles">miles</option>
 						</select>
 					</fieldset>
 					<p>
 					<fieldset>
+						<label for="fuel">Capacity: </label>
+						<select name="fuel">
+							<option value="liter">l</option>
+      						<option value="gallon">g</option>
+						</select>
+					</fieldset>
+					<p>
+					<p>
+					<fieldset>
 						<label for="money">Currency: </label>
 						<select name="money">
-							<option value="euro">Euro</option>
-      						<option value="dollar">Dollar</option>
+							<option value="euro">EUR</option>
+      						<option value="dollar">USD</option>
 						</select>
 					</fieldset>
 					<p>
@@ -235,10 +231,6 @@
 						</select>
 					</fieldset>
 				</form>
-				<p class="expand model">Comment [ + ]</p>
-				<div class="comment">
-				  	<p class="proposal">as there different speeds and currencies possible, also the period in which all the calculation is done could be changeable. see also compare, time - christopher</p>
-                 </div>
 			</div>
 			
 			<div id="appendix" class="card">
