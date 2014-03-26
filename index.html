@@ -42,7 +42,7 @@
 				<div class="box">
 					<div class="action">
 						<p><a class="link" href="./index.html#details">[image of car]</a></p>
-						<span><b>Mario has a speed of <code>%[details.speed]%</code> km/h.</b></span>
+						<span><b>Mario has a speed of <code>%[car.speed]%</code> km/h.</b></span>
 					</div>
 				</div>
 				<p class="expand view">Comment [ + ]</p>
@@ -109,46 +109,49 @@
 			<div id="compare" class="card">
 				<div id="input" class="front panel">
 					<h2>Input</h2>
-					<p class="expand view">Comment [ + ]</p>
-					<div class="comment">
-				  		<p class="proposal">design this view as a wizard, eg. split it apart in different panels? - christopher.</p>
+					
+					<div id="example">
+						<ul>
+						</ul>
+						<button>getDefaultData</button>
 					</div>
 				
 					<div id="way" class="data">
 				 		<h3>Way</h3>
-				 		<p>Between leaving home and reaching the workplace <code>%[input.way.duration]%</code> minutes pass. The ride is <code>%[input.way.distance]%</code> kilometers. <a class="link" href="./index.html#appendix">[*]</a></p>
+				 		<p>Between leaving home and reaching the workplace <input type="text" name="way.duration" value="way.duration"></input> minutes pass. The ride is <input type="text" name="way.distance" value="way.distance"></input> kilometers. <a class="link" href="./index.html#appendix">[*]</a></p>
 				 		<p class="expand controller">Comment [ + ]</p>
 				 		<div class="comment">
-				   			<p class="proposal">the route, eg. the <code>input.way.distance</code> can be computed, with the help of a map to display, as already talked about. this would be then the asked foreign apis.</p>
+				   			<p class="proposal">the route, eg. the <code>way.distance</code> can be computed, with the help of a map to display, as already talked about. this would be then the asked foreign apis.</p>
 				 		</div>
-				 		<p>You will drive the route to work <code>%[input.way.times]%</code> times a day</p>
+				 		<p>You will drive the route to work <input type="text" name="way.times" value="way.times"></input> times a day</p>
 					</div>
-				
-					<div id="money" class="data">
-				 		<h3>Money</h3>
-				 		<p class="expand view">Comment [ + ]</p>
+					
+						<p class="expand view">Comment [ + ]</p>
 				 		<div class="comment">
 				  			<p class="proposal">still searching for some simple &amp; selfdiscribing names, especially for the tabs/views - christopher.</p>
 				 		</div>
-				 		<p>You use your <code>%[input.vehicle.type]%</code> to get to work.</p>
-				 		<p>The <code>%[input.vehicle.type]%</code> was purchased for &euro; <code>%[input.vehicle.price]%</code>. You expect to be able to use it <code>%[input.vehicle.years]%</code> years.</p>
-				 		<p>The <code>%[select.transport.vehicle]%</code> is used for <code>%[input.vehicle.usage]%</code> % private purposes.</p>
+				
+					<div id="money" class="data">
+				 		<h3>Money</h3>
+				 		<p>You use your <input type="text" name="vehicle.type" value="vehicle.type"></input> to get to work.</p>
+				 		<p>The <input type="text" name="vehicle.type" value="vehicle.type"></input> was purchased for &euro; <input type="text" name="vehicle.price" value="vehicle.price"></input>. You expect to be able to use it <input type="text" name="vehicle.years" value="vehicle.years"></input> years.</p>
+				 		<p>The <input type="text" name="vehicle.type" value="vehicle.type"></input> is used for <input type="text" name="vehicle.usage" value="vehicle.usage"></input> % private purposes.</p>
 				 		
 				 		<p><code>if car/motorcycle:</code><br>
-				 		One liter of fuel costs &euro; <code>%[input.expenses.fuel]%</code>, and the vehicle consumes <code>%[input.vehicle.consumption]%</code> liter per 100 km</p>
-				 		<p>For a more significant computation, however, we must also consider the cost of the <code>%[input.vehicle.type]%</code>. In one year you spend:</p>
+				 		One liter of fuel costs &euro; <input type="text" name="expenses.fuel" value="expenses.fuel"></input>, and the vehicle consumes <input type="text" name="vehicle.consumption" value="vehicle.consumption"></input> liter per 100 km</p>
+				 		<p>For a more significant computation, however, we must also consider the cost of the <input type="text" name="vehicle.type" value="vehicle.type"></input>. In one year you spend:</p>
 				 		<ul>
-							<li>insurance: &euro; <code>%[input.expenses.insurance]%</code></li>
-							<li>tax: &euro; <code>%[input.expenses.tax]%</code></li>
-							<li>maintenance: &euro; <code>%[input.expenses.maintenance]%</code></li>
-							<li>other expenses (tolls, parking, etc..): &euro; <code>%[input.expenses.other]%</code></li>
+							<li>insurance: &euro; <input type="text" name="expenses.insurance" value="expenses.insurance"></input></li>
+							<li>tax: &euro; <input type="text" name="expenses.tax" value="expenses.tax"></input></li>
+							<li>maintenance: &euro; <input type="text" name="expenses.maintenance" value="expenses.maintenance"></input></li>
+							<li>other expenses (tolls, parking, etc..): &euro; <input type="text" name="expenses.other" value="expenses.other"></input></li>
 				 		</ul>
 					</div>
 				
 					<div id="time" class="data">
 				 		<h3>Time</h3>
-				 		<p>You work <code>%[input.time.hours]%</code> hours a day, for <code>%[input.time.days]%</code> days a year.</p>
-				 		<p>You have a monthly salary of &euro; <code>%[input.time.salary]%</code>.</p>
+				 		<p>You work <input type="text" name="time.hours" value="time.hours"></input> hours a day, for <input type="text" name="time.days" value="time.days"></input> days a year.</p>
+				 		<p>You have a salary of &euro; <input type="text" name="time.salary" value="time.salary"></input> per year.</p>
 				 		<p class="expand model">Comment [ + ]</p>
 				 		<div class="comment">
 				  			<p class="note">not sure if everybody knows, who many days, she/he works a year. we can also make the hole calculation based on a month by default. which are the custom parameters in italy? - christopher</p>
@@ -166,16 +169,16 @@
 			
 					<dl>
 						<dt>Car:</dt>
-						<dd>Traveling by car you have a speed of <code>%[car.total.speed]%</code> km/h. <a class="link" href="./index.html#details">[ details ]</a></dd>
+						<dd>Traveling by car you have a speed of <code>%[car.speed]%</code> km/h. <a class="link" href="./index.html#details">[ details ]</a></dd>
 					
 						<dt>Motorcycle:</dt>
-						<dd>Traveling the same way by motorcycle you have a speed of <code>%[motorcycle.total.speed]%</code> km/h. <a class="link" href="./index.html#details">[ details ]</a></dd>
+						<dd>Traveling the same way by motorcycle you have a speed of <code>%[motorcycle.speed]%</code> km/h. <a class="link" href="./index.html#details">[ details ]</a></dd>
 				
 						<dt>Cycling:</dt>
-						<dd>Traveling the same way by bicycle you have a speed of <code>%[bike.total.speed]%</code> km/h. <a class="link" href="./index.html#details">[ details ]</a></dd>
+						<dd>Traveling the same way by bicycle you have a speed of <code>%[bike.speed]%</code> km/h. <a class="link" href="./index.html#details">[ details ]</a></dd>
 					
 						<dt>Walking:</dt>
-						<dd>Just walking you have a speed of <code>%[walk.total.speed]%</code> km/h.</dd>
+						<dd>Just walking you have a speed of <code>%[walk.speed]%</code> km/h.</dd>
 					</dl>
 					
 					<p class="expand model">Comment [ + ]</p>
@@ -282,7 +285,7 @@
 					}
 				});
 		  		main.children().hide();
-		  		$(card).toggle();
+		  		$(card).show();
 		  		$(card).children("div.front").show();
 		  		$(card).children("div.front").children("div.data").show();
 		  		$(card).children("div.action").show();
@@ -310,7 +313,7 @@
 		  		var card = panel.parent("div").show();
 		  		var main = $("#main");
 		  		$(main).children().hide();
-		  		$(card).toggle();
+		  		$(card).show();
 		  
 		  		var boxes = panel.children("div");
 		  		var detail = boxes.filter(function(i) {
@@ -326,29 +329,48 @@
 		  		
 		  	});
 		  	
-		  	/*
-         	var example = "car";
          	var json = './data/transport.json';
-         	var values = {};
-         	$.getJSON(json,  function(data) {
-         		$.each(data, function(i,x) {
-		  			if (i === example) {
-		  				name = i;
-		  				table = "transport";
-		  				values = x.transport;	
-		  			}
-         		});	
+         	var mario = {};
+         	$.getJSON(json, function(data) {
+         		mario = data[0];
          	}); 
-        
-		  	var data = $("#data ul");
-		  	var button = $("#data button");
-		  	button.click(function () {
-		  		data.empty();
-		  		$.each(values, function(key,value) {
-		  			data.append($("<li>").append(name, ".", table, ".", key, ": ").append(value));
-		  		});
-		  	});
-		  	*/
+         	
+         	var button = $("#example button");
+         	
+		  	var input_panel = $("#compare div.front");
+		  	var data_panels = input_panel.children("div.data");
+		  	
+		  	button.click(function() {
+		  	
+		  		data_panels.filter(function(i) {
+		  			var id= $(this).attr("id");
+		  			var paragraphs = $(this).children("p");
+		  			paragraphs.filter(function(i) {
+		  				var inputs = $(this).children("input");
+		  				$.each(inputs, function(i,t) {
+		  					var input_name = $(this).attr("name");
+		  					var input_value;
+		  					var group;
+		  					var pairs = {};
+		  					$.each(mario, function(table,values) {
+		  						if (table === id) {
+		  							group = table;
+		  							pairs = values;
+		  						}
+		  					});
+		  				
+		  					$.each(pairs, function(key,value) {
+		  						if (input_name === group + "." + key) {
+		  							input_value = value;
+		  						}
+		  					});
+		  					$(this).attr("value",input_value);
+		  				});
+		  			});  		
+				});
+			
+			});
+		  	
 		 }); 	
         </script>
         
