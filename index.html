@@ -87,8 +87,8 @@
 				 	<h3>Vehicle</h3>
 				 	<p>The person spends &euro; <code>%[details.vehicle.upkeeping]%</code> per year for the upkeeping of the <code>%[details.vehicle.type]%</code>.</p>
 				 	<p><code>if car/motorcycle:</code><br>
-				 She /he also spends &euro; <code>%[details.vehicle.fuel</code>]%  each year for fuel.</p>
-				 	<p>And don&apos;t forget the vehicle itself, which costs &euro; <code>%[details.vehicle.price]%</code> each year.</p>
+				 She /he also spends &euro; <code>%[details.vehicle.fuelspendings</code>]%  each year for fuel.</p>
+				 	<p>And don&apos;t forget the vehicle itself, which costs &euro; <code>%[details.vehicle.costs]%</code> each year.</p>
 				 	<p>Thus the total expenses per year are &euro; <code>%[details.vehicle.total]%</code>.</p>
 				 	
 				 	<p><a class="input" href="./index.html#vehicle">[ Input ]</a></p>
@@ -149,7 +149,7 @@
 				 		<h3>Vehicle</h3>
 				 		
 				 		<p class="fields">
-				 			<label for="vehicle.type">Vehile: </label>
+				 			<label for="vehicle.type">Vehicle: </label>
 				 			<select name="vehicle.type">
 								<option value="car">car</option>
       							<option value="bike">bike</option>
@@ -160,17 +160,17 @@
 						<p class="fields">
 							<label for="vehicle.type">Price: </label> 
 				 			<input type="text" name="vehicle.price" value="vehicle.price"></input> &euro;<br>
-				 			<label for="vehicle.years">Usage: </label>
+				 			<label for="vehicle.years">Use length: </label>
 				 			<input type="text" name="vehicle.years" value="vehicle.years"></input> years<br>
-				 			<label for="vehicle.usage">private purposes: </label>
+				 			<label for="vehicle.usage">Private usage: </label>
 				 			<input type="text" name="vehicle.usage" value="vehicle.usage"></input> %
 				 		</p>
 				 		
 				 		<p class="fields">
 				 			<code>if car/motorcycle:</code><br>
-				 			<label for="vehicle.fuel">fuel costs: </label>
-				 			<input type="text" name="vehicle.fuel" value="vehicle.fuel"></input> &euro;<br>
-				 			<label for="vehicle.consumption">consumption: </label>
+				 			<label for="vehicle.fuel">Fuel price: </label>
+				 			<input type="text" name="vehicle.fuel" value="vehicle.fuel"></input> &euro; per liter<br>
+				 			<label for="vehicle.consumption">Consumption: </label>
 				 			 <input type="text" name="vehicle.consumption" value="vehicle.consumption"></input> liter per 100 km
 				 		</p>
 				 		
@@ -181,7 +181,7 @@
 							<input type="text" name="vehicle.tax" value="vehicle.tax"></input> &euro;<br>
 							<label for="vehicle.maintenance">Maintenance: </label>
 							<input type="text" name="vehicle.maintenance" value="vehicle.maintenance"></input> &euro;<br>
-							<label for="vehicle.other">Other: </label>:<input type="text" name="vehicle.other" value="vehicle.other"></input> &euro;
+							<label for="vehicle.other">Other: </label><input type="text" name="vehicle.other" value="vehicle.other"></input> &euro;
 						</p>
 						
 						<div class="expand">
@@ -316,7 +316,6 @@
 		  		var name = target.substring(hash);
 		  		var main = $("#main");
 		  		var card = $(name);
-		  		var panels = card.children(".panel");
 		  		var list = $("#footer div ul");
 		  		var items = list.children();
 		  		var tab = items.filter(function(i) {
@@ -363,6 +362,7 @@
 		  		var action = $("#compare div.action");
 		  		main.children().hide();
 		  		card.show();
+		  		frontpanel.show();
 		  
 		  		var boxes = frontpanel.children("div");
 		  		var detail = boxes.filter(function(i) {
