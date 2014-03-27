@@ -118,40 +118,78 @@
 				
 					<div id="way" class="data">
 				 		<h3>Way</h3>
-				 		<p>Between leaving home and reaching the workplace <input type="text" name="way.duration" value="way.duration"></input> minutes pass. The ride is <input type="text" name="way.distance" value="way.distance"></input> kilometers. <a class="link" href="./index.html#appendix">[*]</a></p>
+				 		<p class="fields">
+				 			<label for="way.duration">Duration: </label>
+				 			<input type="text" name="way.duration" value="way.duration"></input> minutes<br>
+				 			<label for="way.duration">Distance: </label>
+				 			<input type="text" name="way.distance" value="way.distance"></input> kilometers. <a class="link" href="./index.html#appendix">[*]</a><br>
+				 			<label for="way.times">Times: </label><input type="text" name="way.times" value="way.times"></input> times a day</p>
+				 		</p>
 				 		<p class="expand controller">Comment [ + ]</p>
 				 		<div class="comment">
 				   			<p class="proposal">the route, eg. the <code>way.distance</code> can be computed, with the help of a map to display, as already talked about. this would be then the asked foreign apis.</p>
 				 		</div>
-				 		<p>You will drive the route to work <input type="text" name="way.times" value="way.times"></input> times a day</p>
+				 		
 					</div>
 				
 					<div id="vehicle" class="data">
 				 		<h3>Vehicle</h3>
 				 		
-				 		<p class="expand view">Comment [ + ]</p>
+				 		<p class="fields">
+				 			<label for="vehicle.type">Vehile: </label>
+				 			<select name="vehicle.type">
+								<option value="car">car</option>
+      							<option value="bike">bike</option>
+      							<option value="public">public</option>
+							</select>
+						</p>
+						
+						<p class="fields">
+							<label for="vehicle.type">Price: </label> 
+				 			<input type="text" name="vehicle.price" value="vehicle.price"></input> &euro;<br>
+				 			<label for="vehicle.years">Usage: </label>
+				 			<input type="text" name="vehicle.years" value="vehicle.years"></input> years<br>
+				 			<label for="vehicle.usage">private purposes: </label>
+				 			<input type="text" name="vehicle.usage" value="vehicle.usage"></input> %
+				 		</p>
+				 		
+				 		<p class="fields">
+				 			<code>if car/motorcycle:</code><br>
+				 			<label for="vehicle.fuel">fuel costs: </label>
+				 			<input type="text" name="vehicle.fuel" value="vehicle.fuel"></input> &euro;<br>
+				 			<label for="vehicle.consumption">consumption: </label>
+				 			 <input type="text" name="vehicle.consumption" value="vehicle.consumption"></input> liter per 100 km
+				 		</p>
+				 		
+				 		<p class="fields">
+				 			<label for="vehicle.insurance">Insurance: </label>
+				 			<input type="text" name="vehicle.insurance" value="vehicle.insurance"></input> &euro;<br>
+							<label for="vehicle.tax">Tax: </label>
+							<input type="text" name="vehicle.tax" value="vehicle.tax"></input> &euro;<br>
+							<label for="vehicle.maintenance">Maintenance: </label>
+							<input type="text" name="vehicle.maintenance" value="vehicle.maintenance"></input> &euro;<br>
+							<label for="vehicle.other">Other: </label>:<input type="text" name="vehicle.other" value="vehicle.other"></input> &euro;
+						</p>
+						
+						<p class="expand view">Comment [ + ]</p>
 				 		<div class="comment">
 				  			<p class="proposal">still searching for some simple &amp; selfdiscribing names, especially for the tabs/views, but as you can see by the input names, the model is not optimal too - christopher.</p>
 				 		</div>
-				 		
-				 		<p>You use your <input type="text" name="vehicle.type" value="vehicle.type"></input> to get to work.</p>
-				 		<p>The <input type="text" name="vehicle.type" value="vehicle.type"></input> was purchased for &euro; <input type="text" name="vehicle.price" value="vehicle.price"></input>. You expect to be able to use it <input type="text" name="vehicle.years" value="vehicle.years"></input> years.</p>
-				 		<p>The <input type="text" name="vehicle.type" value="vehicle.type"></input> is used for <input type="text" name="vehicle.usage" value="vehicle.usage"></input> % private purposes.</p>
-				 		
-				 		<p><code>if car/motorcycle:</code><br>
-				 		One liter of fuel costs &euro; <input type="text" name="vehicle.fuel" value="vehicle.fuel"></input>, and the vehicle consumes <input type="text" name="vehicle.consumption" value="vehicle.consumption"></input> liter per 100 km</p>
-				 		<p>For a more significant computation, however, we must also consider the cost of the <input type="text" name="vehicle.type" value="vehicle.type"></input>. In one year you spend:</p>
-				 		<p><b>insurance</b>: &euro; <input type="text" name="vehicle.insurance" value="vehicle.insurance"></input></p>
-						<p><b>tax</b>: &euro; <input type="text" name="vehicle.tax" value="vehicle.tax"></input></p>
-						<p><b>maintenance</b>: &euro; <input type="text" name="vehicle.maintenance" value="vehicle.maintenance"></input></p>
-						<p><b>other expenses</b> (tolls, parking, etc..): &euro; <input type="text" name="vehicle.other" value="vehicle.other"></input></p>
 				 		
 					</div>
 				
 					<div id="time" class="data">
 				 		<h3>Time</h3>
-				 		<p>You work <input type="text" name="time.hours" value="time.hours"></input> hours a day, for <input type="text" name="time.days" value="time.days"></input> days a year.</p>
-				 		<p>You have a salary of &euro; <input type="text" name="time.salary" value="time.salary"></input> per year.</p>
+				 		<p class="fields">
+				 			<label for="time.hours">Work hours: </label>
+				 			<input type="text" name="time.hours" value="time.hours"></input> a day<br>
+				 			<label for="time.hours">Work days: </label>
+				 			<input type="text" name="time.days" value="time.days"></input> a year.
+				 		</p>
+				 		<p class="fields">
+				 			<label for="time.hours">Salary: </label>
+				 			<input type="text" name="time.salary" value="time.salary"></input> per year.
+				 		</p>
 			    	</div> 
 			    	
 				</div>
@@ -327,7 +365,7 @@
 		  	
 		  		data_panels.filter(function(i) {
 		  			var id= $(this).attr("id");
-		  			var paragraphs = $(this).children("p");
+		  			var paragraphs = $(this).children("p.fields");
 		  			paragraphs.filter(function(i) {
 		  				var inputs = $(this).children("input");
 		  				$.each(inputs, function(i,t) {
