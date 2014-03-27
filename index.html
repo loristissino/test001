@@ -39,24 +39,31 @@
 			 
 			<div id="start" class="card">
 				<h2>Start</h2>
+				
 				<div class="box">
 					<div class="action">
 						<p><a class="link" href="./index.html#details">[image of car]</a></p>
 						<span><b>Mario has a speed of <code>%[car.speed]%</code> km/h.</b></span>
 					</div>
 				</div>
-				<p class="expand view">Comment [ + ]</p>
-				<div class="comment">
-				  <p class="proposal">the arrangement of the views is not settled - this is still a sketch ... nevertheless, it is important that the start page illustrates the apps options with a single look - christopher.</p>
+				
+				<div class="expand">
+					<p class="view">Comment [ + ]</p>
+					<div class="comment">
+				  		<p class="proposal">the arrangement of the views is not settled - this is still a sketch ... nevertheless, it is important that the start page illustrates the apps options with a single look - christopher.</p>
+					</div>
 				</div>
+				
 			</div>
 			
 			<div id="details" class="card">
 				<h2>Details</h2>
 				
-				<p class="expand view">Comment [ + ]</p>
-				<div class="comment">
-					<p class="proposal">repeat the input ... and how? both, details and compare view are too large for mobile screens - christopher</p>
+				<div class="expand">
+					<p class="view">Comment [ + ]</p>
+					<div class="comment">
+						<p class="proposal">repeat the input ... and how? both, details and compare view are too large for mobile screens - christopher</p>
+					</div>
 				</div>
 				
 				<div class="box">
@@ -66,11 +73,14 @@
 				 	
 				 	<p><a class="input" href="./index.html#way">[ Input ]</a></p>
 				 	
-				 	<p class="expand view">Comment [ + ]</p>
-				 	<div class="comment">
-                  		<p class="note">i think the &quot;door-to-door&quot; speed is distracting the user from the real apps message (and will not help the bike too) - christopher</p>
-                      <p class="proposal">Not really the same. It could be interesting to make people think that they see, for instance, 60 km/h in their speedometer -- but if they take into consideration also the time they spend looking for the parking place, walking from the parking lot to the destination, etc. their speed is, say, 25 km/h. And if they consider also the costs involved, and the time they spend to earn the money to pay the cose, their speed is 7 km/h. - Loris</p>
+				 	<div class="expand">
+						<p class="view">Comment [ + ]</p>
+				 		<div class="comment">
+                  			<p class="note">i think the &quot;door-to-door&quot; speed is distracting the user from the real apps message (and will not help the bike too) - christopher</p>
+                      	<p class="proposal">Not really the same. It could be interesting to make people think that they see, for instance, 60 km/h in their speedometer -- but if they take into consideration also the time they spend looking for the parking place, walking from the parking lot to the destination, etc. their speed is, say, 25 km/h. And if they consider also the costs involved, and the time they spend to earn the money to pay the cose, their speed is 7 km/h. - Loris</p>
+                 		</div>
                  	</div>
+                 	
                 </div>
         
 				<div class="box">
@@ -110,7 +120,7 @@
 				<div id="input" class="front panel">
 					<h2>Input</h2>
 					
-					<div id="example">
+					<div id="example" class="box">
 						<ul>
 						</ul>
 						<button>getDefaultData</button>
@@ -125,9 +135,12 @@
 				 			<input type="text" name="way.distance" value="way.distance"></input> kilometers. <a class="link" href="./index.html#appendix">[*]</a><br>
 				 			<label for="way.times">Times: </label><input type="text" name="way.times" value="way.times"></input> times a day</p>
 				 		</p>
-				 		<p class="expand controller">Comment [ + ]</p>
-				 		<div class="comment">
-				   			<p class="proposal">the route, eg. the <code>way.distance</code> can be computed, with the help of a map to display, as already talked about. this would be then the asked foreign apis.</p>
+				 		
+				 		<div class="expand">
+				 			<p class="controller">Comment [ + ]</p>
+				 			<div class="comment">
+				   				<p class="proposal">the route, eg. the <code>way.distance</code> can be computed, with the help of a map to display, as already talked about. this would be then the asked foreign apis.</p>
+				 			</div>
 				 		</div>
 				 		
 					</div>
@@ -171,9 +184,11 @@
 							<label for="vehicle.other">Other: </label>:<input type="text" name="vehicle.other" value="vehicle.other"></input> &euro;
 						</p>
 						
-						<p class="expand view">Comment [ + ]</p>
-				 		<div class="comment">
-				  			<p class="proposal">still searching for some simple &amp; selfdiscribing names, especially for the tabs/views, but as you can see by the input names, the model is not optimal too - christopher.</p>
+						<div class="expand">
+				 			<p class="view">Comment [ + ]</p>
+				 			<div class="comment">
+				  				<p class="proposal">still searching for some simple &amp; selfdiscribing names, especially for the tabs/views, but as you can see by the input names, the model is not optimal too - christopher.</p>
+				 			</div>
 				 		</div>
 				 		
 					</div>
@@ -212,18 +227,23 @@
 						<dd>Just walking you have a speed of <code>%[walk.speed]%</code> km/h.</dd>
 					</dl>
 					
-					<p class="expand model">Comment [ + ]</p>
-					<div class="comment">
-					 	<p class="note">change it to public transport or add public transport? - loris</p>
-					 	<p class="proposal">change, because only few people just walk to work and i think three compares a just fine, but seems like motorcycling is important in italy too - christopher</p>
+					<div class="expand">
+						<p class="model">Comment [ + ]</p>
+						<div class="comment">
+					 		<p class="note">change it to public transport or add public transport? - loris</p>
+					 		<p class="proposal">change, because only few people just walk to work and i think three compares a just fine, but seems like motorcycling is important in italy too - christopher</p>
+					 	</div>
 					</div>
 				
 					<p>[ Save data ]</p>
 				
-					<p class="expand model">Comment [ + ]</p>
-					<div class="comment">
-              			<p class="note">it can be something added later. Could be useful to let people share their information (you could get a unique URL for your data, for instance) - loris</p>
+					<div class="expand">
+						<p class="model">Comment [ + ]</p>
+						<div class="comment">
+              				<p class="note">it can be something added later. Could be useful to let people share their information (you could get a unique URL for your data, for instance) - loris</p>
+						</div>
 					</div>
+					
 				</div>
 				
 			</div>
@@ -260,9 +280,11 @@
 			<div id="appendix" class="card">
 				<h2>Appendix *</h2>
 				
-				<p class="expand view">Comment [ + ]</p>
-				<div class="comment">
-					<p class="proposal">This should contain explanations about the different parameters (which?) as well as a help section (and information about the makers ?) - christopher.</p>
+				<div class="expand">
+					<p class="view">Comment [ + ]</p>
+					<div class="comment">
+						<p class="proposal">This should contain explanations about the different parameters (which?) as well as a help section (and information about the makers ?) - christopher.</p>
+					</div>
 				</div>
 				
 			</div>
@@ -291,12 +313,14 @@
 		  	link.click(function() {
 		  		var target = $(this).attr('href');
 		  		var hash = target.indexOf("#");
-		  		var card = target.substring(hash);
+		  		var name = target.substring(hash);
 		  		var main = $("#main");
+		  		var card = $(name);
+		  		var panels = card.children(".panel");
 		  		var list = $("#footer div ul");
 		  		var items = list.children();
 		  		var tab = items.filter(function(i) {
-		  			if ($(this).attr('title') === card.substring(1)) {
+		  			if ($(this).attr('title') === name.substring(1)) {
 		  				$(this).removeClass("passive");
 		  				$(this).addClass("active");
 		  			}
@@ -305,16 +329,18 @@
 		  				$(this).addClass("passive");
 					}
 				});
-		  		main.children().hide();
-		  		$(card).show();
-		  		$(card).children("div.front").show();
-		  		$(card).children("div.front").children("div.data").show();
-		  		$(card).children("div.action").show();
-		  		$(card).children("div.back").hide();
+				main.children().hide();
+				card.show();
+				if (name.substring(1) == "compare") {
+					card.children("div.front").show();
+					card.children("div.front").children().show();
+					card.children("div.action").show();
+		  			card.children("div.back").hide();
+		  		}  			  		
 		  	});
 		  	
-		  	var comment = $(".expand");
-		  	comment.click(function () {
+		  	var expand = $(".expand p");
+		  	expand.click(function () {
 				$(this).next("div.comment").toggle();
 		  	});
 		  	
@@ -330,13 +356,15 @@
 		  		var target = $(this).attr('href');
 		  		var hash = target.indexOf("#");
 		  		var box = target.substring(hash);
-		  		var panel = $("#compare div.front");
-		  		var card = panel.parent("div").show();
 		  		var main = $("#main");
-		  		$(main).children().hide();
-		  		$(card).show();
+		  		var card = $("#compare");
+		  		var frontpanel = $("#compare div.front");
+		  		var backpanel = $("#compare div.back");
+		  		var action = $("#compare div.action");
+		  		main.children().hide();
+		  		card.show();
 		  
-		  		var boxes = panel.children("div");
+		  		var boxes = frontpanel.children("div");
 		  		var detail = boxes.filter(function(i) {
 		  			if ($(this).attr('id') === box.substring(1)) {
 		  				$(this).show();
@@ -346,7 +374,8 @@
 		  			}
 		  		});
 		  		
-		  		$(card).children("div.action").hide();
+		  		backpanel.hide();
+		  		action.hide();
 		  		
 		  	});
 		  	
