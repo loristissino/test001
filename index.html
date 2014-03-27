@@ -74,14 +74,14 @@
                 </div>
         
 				<div class="box">
-				 	<h3>Money</h3>
-				 	<p>The person spends &euro; <code>%[details.expenses.upkeeping]%</code> per year for the upkeeping of the <code>%[details.vehicle.type]%</code>.</p>
+				 	<h3>Vehicle</h3>
+				 	<p>The person spends &euro; <code>%[details.vehicle.upkeeping]%</code> per year for the upkeeping of the <code>%[details.vehicle.type]%</code>.</p>
 				 	<p><code>if car/motorcycle:</code><br>
-				 She /he also spends &euro; <code>%[details.expenses.fuel</code>]%  each year for fuel.</p>
-				 	<p>And don&apos;t forget the vehicle itself, which costs &euro; <code>%[details.expenses.vehicle]%</code> each year.</p>
-				 	<p>Thus the total expenses per year are &euro; <code>%[details.expenses.total]%</code>.</p>
+				 She /he also spends &euro; <code>%[details.vehicle.fuel</code>]%  each year for fuel.</p>
+				 	<p>And don&apos;t forget the vehicle itself, which costs &euro; <code>%[details.vehicle.price]%</code> each year.</p>
+				 	<p>Thus the total expenses per year are &euro; <code>%[details.vehicle.total]%</code>.</p>
 				 	
-				 	<p><a class="input" href="./index.html#money">[ Input ]</a></p>
+				 	<p><a class="input" href="./index.html#vehicle">[ Input ]</a></p>
 				 	
 				</div>
 				
@@ -126,8 +126,8 @@
 				 		<p>You will drive the route to work <input type="text" name="way.times" value="way.times"></input> times a day</p>
 					</div>
 				
-					<div id="money" class="data">
-				 		<h3>Money</h3>
+					<div id="vehicle" class="data">
+				 		<h3>Vehicle</h3>
 				 		
 				 		<p class="expand view">Comment [ + ]</p>
 				 		<div class="comment">
@@ -139,14 +139,12 @@
 				 		<p>The <input type="text" name="vehicle.type" value="vehicle.type"></input> is used for <input type="text" name="vehicle.usage" value="vehicle.usage"></input> % private purposes.</p>
 				 		
 				 		<p><code>if car/motorcycle:</code><br>
-				 		One liter of fuel costs &euro; <input type="text" name="expenses.fuel" value="expenses.fuel"></input>, and the vehicle consumes <input type="text" name="vehicle.consumption" value="vehicle.consumption"></input> liter per 100 km</p>
+				 		One liter of fuel costs &euro; <input type="text" name="vehicle.fuel" value="vehicle.fuel"></input>, and the vehicle consumes <input type="text" name="vehicle.consumption" value="vehicle.consumption"></input> liter per 100 km</p>
 				 		<p>For a more significant computation, however, we must also consider the cost of the <input type="text" name="vehicle.type" value="vehicle.type"></input>. In one year you spend:</p>
-				 		<ul>
-							<li>insurance: &euro; <input type="text" name="expenses.insurance" value="expenses.insurance"></input></li>
-							<li>tax: &euro; <input type="text" name="expenses.tax" value="expenses.tax"></input></li>
-							<li>maintenance: &euro; <input type="text" name="expenses.maintenance" value="expenses.maintenance"></input></li>
-							<li>other expenses (tolls, parking, etc..): &euro; <input type="text" name="expenses.other" value="expenses.other"></input></li>
-				 		</ul>
+				 		<p><b>insurance</b>: &euro; <input type="text" name="vehicle.insurance" value="vehicle.insurance"></input></p>
+						<p><b>tax</b>: &euro; <input type="text" name="vehicle.tax" value="vehicle.tax"></input></p>
+						<p><b>maintenance</b>: &euro; <input type="text" name="vehicle.maintenance" value="vehicle.maintenance"></input></p>
+						<p><b>other expenses</b> (tolls, parking, etc..): &euro; <input type="text" name="vehicle.other" value="vehicle.other"></input></p>
 				 		
 					</div>
 				
@@ -154,10 +152,6 @@
 				 		<h3>Time</h3>
 				 		<p>You work <input type="text" name="time.hours" value="time.hours"></input> hours a day, for <input type="text" name="time.days" value="time.days"></input> days a year.</p>
 				 		<p>You have a salary of &euro; <input type="text" name="time.salary" value="time.salary"></input> per year.</p>
-				 		<p class="expand model">Comment [ + ]</p>
-				 		<div class="comment">
-				  			<p class="note">not sure if everybody knows, who many days, she/he works a year. we can also make the hole calculation based on a month by default. which are the custom parameters in italy? - christopher</p>
-			      		</div>
 			    	</div> 
 			    	
 				</div>
@@ -172,9 +166,6 @@
 					<dl>
 						<dt>Car:</dt>
 						<dd>Traveling by car you have a speed of <code>%[car.speed]%</code> km/h. <a class="link" href="./index.html#details">[ details ]</a></dd>
-					
-						<dt>Motorcycle:</dt>
-						<dd>Traveling the same way by motorcycle you have a speed of <code>%[motorcycle.speed]%</code> km/h. <a class="link" href="./index.html#details">[ details ]</a></dd>
 				
 						<dt>Cycling:</dt>
 						<dd>Traveling the same way by bicycle you have a speed of <code>%[bike.speed]%</code> km/h. <a class="link" href="./index.html#details">[ details ]</a></dd>
@@ -193,8 +184,7 @@
 				
 					<p class="expand model">Comment [ + ]</p>
 					<div class="comment">
-				  		<p class="note">not sure about saving the data on the server (, but local storage possible, see sencha store) - christopher.</p>
-              <p class="note">it can be something added later. Could be useful to let people share their information (you could get a unique URL for your data, for instance) - loris</p>
+              			<p class="note">it can be something added later. Could be useful to let people share their information (you could get a unique URL for your data, for instance) - loris</p>
 					</div>
 				</div>
 				
@@ -219,20 +209,11 @@
 						</select>
 					</fieldset>
 					<p>
-					<p>
 					<fieldset>
 						<label for="money">Currency: </label>
 						<select name="money">
 							<option value="euro">EUR</option>
       						<option value="dollar">USD</option>
-						</select>
-					</fieldset>
-					<p>
-					<fieldset>
-						<label for="time">Period: </label>
-						<select name="time">
-							<option value="month">Month</option>
-      						<option selected value="year">Year</option>
 						</select>
 					</fieldset>
 				</form>
