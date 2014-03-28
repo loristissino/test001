@@ -68,7 +68,7 @@
 				
 				<div class="box">
 				 	<h3>Way</h3>
-				 	<p>The total path of the way to the workplace is <code>%[details.way.total]%</code> km per year <a class="link" href="./index.html#appendix">[*]</a>.</p>
+				 	<p>The total path of the way to the workplace is <code>%[calculated.way.total]%</code> km per year <a class="link" href="./index.html#appendix">[*]</a>.</p>
 				 	<p><del>We can calculate the <em>door-to-door</em> speed of in a very simple way, with the classic <em>space / time</em> formula: it is [! <code>OUT</code> !] km/h. [*]</del></p>
 				 	
 				 	<p><a class="input" href="./index.html#way">[ Based On ]</a></p>
@@ -85,11 +85,11 @@
         
 				<div class="box">
 				 	<h3>Vehicle</h3>
-				 	<p>The person spends &euro; <code>%[details.vehicle.upkeeping]%</code> per year for the upkeeping of the <code>%[details.vehicle.type]%</code>.</p>
+				 	<p>The person spends &euro; <code>%[calculated.vehicle.upkeeping]%</code> per year for the upkeeping of the <code>%[calculated.vehicle.type]%</code>.</p>
 				 	<p><code>if car/motorcycle:</code><br>
-				 She /he also spends &euro; <code>%[details.vehicle.fuelspendings</code>]%  each year for fuel.</p>
-				 	<p>And don&apos;t forget the vehicle itself, which costs &euro; <code>%[details.vehicle.costs]%</code> each year.</p>
-				 	<p>Thus the total expenses per year are &euro; <code>%[details.vehicle.total]%</code>.</p>
+				 She /he also spends &euro; <code>%[calculated.vehicle.spendings</code>]%  each year for fuel.</p>
+				 	<p>And don&apos;t forget the vehicle itself, which costs &euro; <code>%[calculated.vehicle.costs]%</code> each year.</p>
+				 	<p>Thus the total expenses per year are &euro; <code>%[calculated.vehicle.total]%</code>.</p>
 				 	
 				 	<p><a class="input" href="./index.html#vehicle">[ Based On ]</a></p>
 				 	
@@ -98,15 +98,15 @@
 				<div class="box">
 				 	<h3>Time</h3>
 				 	<p>What do costs have to do with the speed?</p>
-				 	<p>Within a year, how much time does the person spend to travel?. We have to take into consideration not only the <code>%[details.time.way</code>]% hours on driving, but also the time the person has to work to afford the vehicle - <code>%[details.time.work]%</code> hours.</p>
-				 	<p>In total, it is therefore <code>%[details.time.total]%</code> hours.</p>
+				 	<p>Within a year, how much time does the person spend to travel?. We have to take into consideration not only the <code>%[calculated.time.way</code>]% hours on driving, but also the time the person has to work to afford the vehicle - <code>%[calculated.time.work]%</code> hours.</p>
+				 	<p>In total, it is therefore <code>%[calculated.time.total]%</code> hours.</p>
 				 	<p><a class="input" href="./index.html#time">[ Based On ]</a></p>
 				 	
 				</div>
 				
 				<div class="box">
 				 	<h3>Summary</h3>
-				 	<p><strong>The generalized velocity is: <code>%[details.way.total]%</code> km / <code>%[details.time.total]%</code> h, ie. <code>%[details.speed]%</code> km/h</strong></p>
+				 	<p><strong>The generalized velocity is: <code>%[calculated.way.total]%</code> km / <code>%[calculated.time.total]%</code> h, ie. <code>%[calculated.speed]%</code> km/h</strong></p>
 				</div>
 				
 				<div class="action">
