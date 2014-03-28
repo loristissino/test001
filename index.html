@@ -137,6 +137,10 @@
 				 			<label for="way.times">Times: </label><input type="text" name="way.times" value="way.times"></input> times a day</p>
 				 		</p>
 				 		
+				 		<div class="calc" style="display: none;">
+				 			<p><a class="link" href="index.html#details">[Back to Calculation]</a></p>
+				 		</div>
+				 		
 				 		<div class="expand">
 				 			<p class="controller">Comment [ + ]</p>
 				 			<div class="comment">
@@ -185,6 +189,10 @@
 							<label for="vehicle.other">Other: </label><input type="text" name="vehicle.other" value="vehicle.other"></input> &euro;
 						</p>
 						
+						<div class="calc" style="display: none;">
+				 			<p><a class="link" href="index.html#details">[Back to Calculation]</a></p>
+				 		</div>
+						
 						<div class="expand">
 				 			<p class="view">Comment [ + ]</p>
 				 			<div class="comment">
@@ -206,6 +214,11 @@
 				 			<label for="time.hours">Salary: </label>
 				 			<input type="text" name="time.salary" value="time.salary"></input> per year.
 				 		</p>
+				 		
+				 		<div class="calc" style="display: none;">
+				 			<p><a class="link" href="index.html#details">[Back to Calculation]</a></p>
+				 		</div>
+				 		
 			    	</div> 
 			    	
 				</div>
@@ -334,6 +347,7 @@
 				if (name.substring(1) == "compare") {
 					card.children("div.front").show();
 					card.children("div.front").children().show();
+					card.children("div.front").children("div.data").children("div.calc").hide();
 					card.children("div.action").show();
 		  			card.children("div.back").hide();
 		  		}  			  		
@@ -369,6 +383,7 @@
 		  		var detail = boxes.filter(function(i) {
 		  			if ($(this).attr('id') === box.substring(1)) {
 		  				$(this).show();
+		  				$(this).children(".calc").show();
 		  			}
 		  			else {
 		  				$(this).hide();
