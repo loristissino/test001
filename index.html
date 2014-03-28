@@ -57,7 +57,7 @@
 			</div>
 			
 			<div id="details" class="card">
-				<h2>Details</h2>
+				<h2>Calculation</h2>
 				
 				<div class="expand">
 					<p class="view">Comment [ + ]</p>
@@ -71,7 +71,7 @@
 				 	<p>The total path of the way to the workplace is <code>%[details.way.total]%</code> km per year <a class="link" href="./index.html#appendix">[*]</a>.</p>
 				 	<p><del>We can calculate the <em>door-to-door</em> speed of in a very simple way, with the classic <em>space / time</em> formula: it is [! <code>OUT</code> !] km/h. [*]</del></p>
 				 	
-				 	<p><a class="input" href="./index.html#way">[ Input ]</a></p>
+				 	<p><a class="input" href="./index.html#way">[ Based On ]</a></p>
 				 	
 				 	<div class="expand">
 						<p class="view">Comment [ + ]</p>
@@ -91,7 +91,7 @@
 				 	<p>And don&apos;t forget the vehicle itself, which costs &euro; <code>%[details.vehicle.costs]%</code> each year.</p>
 				 	<p>Thus the total expenses per year are &euro; <code>%[details.vehicle.total]%</code>.</p>
 				 	
-				 	<p><a class="input" href="./index.html#vehicle">[ Input ]</a></p>
+				 	<p><a class="input" href="./index.html#vehicle">[ Based On ]</a></p>
 				 	
 				</div>
 				
@@ -100,7 +100,7 @@
 				 	<p>What do costs have to do with the speed?</p>
 				 	<p>Within a year, how much time does the person spend to travel?. We have to take into consideration not only the <code>%[details.time.way</code>]% hours on driving, but also the time the person has to work to afford the vehicle - <code>%[details.time.work]%</code> hours.</p>
 				 	<p>In total, it is therefore <code>%[details.time.total]%</code> hours.</p>
-				 	<p><a class="input" href="./index.html#time">[ Input ]</a></p>
+				 	<p><a class="input" href="./index.html#time">[ Based On ]</a></p>
 				 	
 				</div>
 				
@@ -218,10 +218,10 @@
 			
 					<dl>
 						<dt>Car:</dt>
-						<dd>Traveling by car you have a speed of <code>%[car.speed]%</code> km/h. <a class="link" href="./index.html#details">[ details ]</a></dd>
+						<dd>Traveling by car you have a speed of <code>%[car.speed]%</code> km/h. <a class="link" href="./index.html#details">[ Calculation ]</a></dd>
 				
 						<dt>Cycling:</dt>
-						<dd>Traveling the same way by bicycle you have a speed of <code>%[bike.speed]%</code> km/h. <a class="link" href="./index.html#details">[ details ]</a></dd>
+						<dd>Traveling the same way by bicycle you have a speed of <code>%[bike.speed]%</code> km/h. <a class="link" href="./index.html#details">[ Calculation ]</a></dd>
 					
 						<dt>Walking:</dt>
 						<dd>Just walking you have a speed of <code>%[walk.speed]%</code> km/h.</dd>
@@ -296,8 +296,8 @@
            <div class="container">
         		<ul>
         			<li title="start" class="active"><a class="link" href="./index.html#start">Start</a></li>
-        			<li title="details"><a class="link" href="./index.html#details">Details</a></li>
-        			<li title="compare"><a class="link" href="./index.html#compare">Compare</a></li>
+        			<li title="details"><a class="link" href="./index.html#details">Calculation</a></li>
+        			<li title="compare"><a class="link" href="./index.html#compare">Comparison</a></li>
         			<li title="appendix"><a class="link" href="./index.html#appendix">About</a></li>
         		</ul>
         	</div>
