@@ -347,7 +347,8 @@
 				if (name.substring(1) == "compare") {
 					card.children("div.front").show();
 					card.children("div.front").children().show();
-					card.children("div.front").children("div.data").children("div.calc").hide();
+card.children("div.front").children("div.data").children("div.calc").hide();
+card.children("div.front").children("div.data").children(".fields").children("input").attr("style","");
 					card.children("div.action").show();
 		  			card.children("div.back").hide();
 		  		}  			  		
@@ -384,6 +385,7 @@
 		  			if ($(this).attr('id') === box.substring(1)) {
 		  				$(this).show();
 		  				$(this).children(".calc").show();
+		  				$(this).children(".fields").children("input").attr("style","border: 0;");
 		  			}
 		  			else {
 		  				$(this).hide();
