@@ -169,15 +169,15 @@ textarea {
 	cursor: pointer;
 }
 
-.expand.view {
+.expand p.view {
 	color: lightblue;
 }
 
-.expand.model {
+.expand p.model {
 	color: #ADBD6C;
 }
 
-.expand.controller {
+.expand p.controller {
 	color: #CC9933;
 }
 
@@ -186,7 +186,7 @@ textarea {
 	padding: 0.5em;
 	margin: 0.5em 0;
 	display: none;
-	
+	text-align: left;
 }
 
 .proposal {
