@@ -743,10 +743,17 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.viewport.WindowsPhone": [
     "Ext.viewport.WP"
   ],
+  "TrueSpeed.controller.Main": [],
   "TrueSpeed.model.Setting": [],
+  "TrueSpeed.model.Travel": [],
+  "TrueSpeed.store.Travel": [],
+  "TrueSpeed.utils.Functions": [],
+  "TrueSpeed.view.CalculationView": [],
   "TrueSpeed.view.DataView": [],
   "TrueSpeed.view.Main": [],
-  "TrueSpeed.view.SettingsView": []
+  "TrueSpeed.view.SettingsView": [],
+  "TrueSpeed.view.StartView": [],
+  "TrueSpeed.view.TravelView": []
 });
 Ext.ClassManager.addNameAliasMappings({
   "Ext.AbstractComponent": [],
@@ -1690,7 +1697,14 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.Ios": [],
   "Ext.viewport.Viewport": [],
   "Ext.viewport.WindowsPhone": [],
+  "TrueSpeed.controller.Main": [],
   "TrueSpeed.model.Setting": [],
+  "TrueSpeed.model.Travel": [],
+  "TrueSpeed.store.Travel": [],
+  "TrueSpeed.utils.Functions": [],
+  "TrueSpeed.view.CalculationView": [
+    "widget.calculationview"
+  ],
   "TrueSpeed.view.DataView": [
     "widget.dataview"
   ],
@@ -1699,5 +1713,11 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "TrueSpeed.view.SettingsView": [
     "widget.settingsview"
+  ],
+  "TrueSpeed.view.StartView": [
+    "widget.startview"
+  ],
+  "TrueSpeed.view.TravelView": [
+    "widget.travelview"
   ]
 });
