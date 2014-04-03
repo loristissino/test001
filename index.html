@@ -42,15 +42,8 @@
 				
 				<div class="box">
 					<div class="action">
-						<p><a class="link" href="./index.html#details">[image of car]</a></p>
+						<p><a class="link" href="./index.html#details">[image of a car]</a></p>
 						<span><b>Mario has a speed of <code>%[mario.speed]%</code> km/h.</b></span>
-					</div>
-				</div>
-				
-				<div class="expand">
-					<p class="view">Comment [ + ]</p>
-					<div class="comment">
-				  		<p class="proposal">the arrangement of the views is not settled - this is still a sketch ... nevertheless, it is important that the start page illustrates the apps options with a single look - christopher.</p>
 					</div>
 				</div>
 				
@@ -59,39 +52,32 @@
 			<div id="details" class="card">
 				<h2>Calculation</h2>
 				
-				<div class="expand">
-					<p class="view">Comment [ + ]</p>
-					<div class="comment">
-						<p class="proposal">repeat the input ... and how? both, details and compare view are too large for mobile screens - christopher</p>
-					</div>
-				</div>
+				<p>for <code>%[person.name]%</code> using a <code>%[vehicle.type]%</code></p>
 				
 				<div class="box">
 				 	<h3>Way</h3>
 				 	<p>The total path of the way to the workplace is <code>%[calculated.way.total]%</code> km per year <a class="link" href="./index.html#appendix">[*]</a>.</p>
-				 	<p><del>We can calculate the <em>door-to-door</em> speed of in a very simple way, with the classic <em>space / time</em> formula: it is [! <code>OUT</code> !] km/h. [*]</del></p>
 				 	
 				 	<p><a class="input" href="./index.html#way">[ Based On ]</a></p>
-				 	
-				 	<div class="expand">
-						<p class="view">Comment [ + ]</p>
-				 		<div class="comment">
-                  			<p class="note">i think the &quot;door-to-door&quot; speed is distracting the user from the real apps message (and will not help the bike too) - christopher</p>
-                      	<p class="proposal">Not really the same. It could be interesting to make people think that they see, for instance, 60 km/h in their speedometer -- but if they take into consideration also the time they spend looking for the parking place, walking from the parking lot to the destination, etc. their speed is, say, 25 km/h. And if they consider also the costs involved, and the time they spend to earn the money to pay the cose, their speed is 7 km/h. - Loris</p>
-                 		</div>
-                 	</div>
                  	
                 </div>
         
 				<div class="box">
 				 	<h3>Vehicle</h3>
 				 	<p>The person spends &euro; <code>%[calculated.vehicle.upkeeping]%</code> per year for the upkeeping of the <code>%[calculated.vehicle.type]%</code>.</p>
-				 	<p><code>if car/motorcycle:</code><br>
-				 She /he also spends &euro; <code>%[calculated.vehicle.spendings</code>]%  each year for fuel.</p>
+				 	<p>[ <code>if car:</code><br>
+				 	The person also spends &euro; <code>%[calculated.vehicle.spendings</code>]%  each year for fuel. ]</p>
 				 	<p>And don&apos;t forget the vehicle itself, which costs &euro; <code>%[calculated.vehicle.costs]%</code> each year.</p>
 				 	<p>Thus the total expenses per year are &euro; <code>%[calculated.vehicle.total]%</code>.</p>
 				 	
 				 	<p><a class="input" href="./index.html#vehicle">[ Based On ]</a></p>
+				 	
+				 	<div class="expand">
+					<p class="view">Comment [ + ]</p>
+					<div class="comment">
+						<p class="proposal">the based-on values should be integrated in the view - like these expand boxes - christopher.</p>
+					</div>
+				</div>
 				 	
 				</div>
 				
@@ -108,24 +94,12 @@
 				 	<h3>Summary</h3>
 				 	<p><strong>The generalized velocity is: <code>%[calculated.way.total]%</code> km / <code>%[calculated.time.total]%</code> h, ie. <code>%[calculated.speed]%</code> km/h</strong></p>
 				</div>
-				
-				<div class="action">
-					<span>And you? What is your own speed?</span>
-					<p>[<a class="link" href="./index.html#compare">Compare</a>]</p>
-				</div>
-				
-				<div class="expand">
-					<p class="view">Comment [ + ]</p>
-					<div class="comment">
-						<p class="proposal">the (further) action button should probably only be seen on the first look - christopher.</p>
-					</div>
-				</div>
 			
 			</div>
 			
 			<div id="compare" class="card">
 				<div id="input" class="front panel">
-					<h2>Input</h2>
+					<h2>Data</h2>
 					
 					<div id="example" class="box">
 						<p>Please provide your own values ...</p>
@@ -137,7 +111,7 @@
 					<div class="expand">
 				 			<p class="view">Comment [ + ]</p>
 				 			<div class="comment">
-				  				<p class="proposal">the defaultData should be provided on loading (or switching the vehicle), eg. the button is only for demonstration - christopher.</p>
+				  				<p class="note">the defaultData should be provided on loading (or switching the vehicle), eg. the button is only for demonstration - christopher.</p>
 				 			</div>
 				 		</div>
 				
@@ -152,14 +126,7 @@
 				 		</p>
 				 		
 				 		<div class="calc" style="display: none;">
-				 			<p><a class="link" href="index.html#details">[Back to Calculation]</a></p>
-				 		</div>
-				 		
-				 		<div class="expand">
-				 			<p class="controller">Comment [ + ]</p>
-				 			<div class="comment">
-				   				<p class="proposal">the route, eg. the <code>way.distance</code> can be computed, with the help of a map to display, as already talked about. this would be then the asked foreign apis.</p>
-				 			</div>
+				 			<p><a class="link" href="index.html#details">[ Reload ]</a></p>
 				 		</div>
 				 		
 					</div>
@@ -204,14 +171,7 @@
 						</p>
 						
 						<div class="calc" style="display: none;">
-				 			<p><a class="link" href="index.html#details">[Back to Calculation]</a></p>
-				 		</div>
-						
-						<div class="expand">
-				 			<p class="view">Comment [ + ]</p>
-				 			<div class="comment">
-				  				<p class="proposal">still searching for some simple &amp; selfdiscribing names, especially for the tabs/views, but as you can see by the input names, the model is not optimal too - christopher.</p>
-				 			</div>
+				 			<p><a class="link" href="index.html#details">[ Reload ]</a></p>
 				 		</div>
 				 		
 					</div>
@@ -230,7 +190,7 @@
 				 		</p>
 				 		
 				 		<div class="calc" style="display: none;">
-				 			<p><a class="link" href="index.html#details">[Back to Calculation]</a></p>
+				 			<p><a class="link" href="index.html#details">[ Reload ]</a></p>
 				 		</div>
 				 		
 			    	</div> 
@@ -238,39 +198,24 @@
 				</div>
 				
 				<div class="action flip">
-				 	<p>[ Compute ]</p>
+					<p>[Compute]</p>
 				</div>
 				
 				<div id="output" class="back panel">
-					<h2>Output</h2>
+					<h2>Comparison</h2>
+
+					for %[person.name]%
 			
 					<dl>
 						<dt>Car:</dt>
-						<dd>Traveling by car you have a speed of <code>%[calculated.car.speed]%</code> km/h. <a class="link" href="./index.html#details">[ Calculation ]</a></dd>
+						<dd>Traveling by car the person has a speed of <code>%[calculated.car.speed]%</code> km/h. <a class="link" href="./index.html#details">[ Calculation ]</a></dd>
 				
 						<dt>Cycling:</dt>
-						<dd>Traveling the same way by bicycle you have a speed of <code>%[calculated.bike.speed]%</code> km/h. <a class="link" href="./index.html#details">[ Calculation ]</a></dd>
+						<dd>Traveling the same way by bicycle the person has a speed of <code>%[calculated.bike.speed]%</code> km/h. <a class="link" href="./index.html#details">[ Calculation ]</a></dd>
 					
-						<dt>Walking:</dt>
-						<dd>Just walking you have a speed of <code>%[calculated.walk.speed]%</code> km/h.</dd>
+						<dt>Public Transport:</dt>
+						<dd>Using the public transport the person has a speed of <code>%[calculated.public.speed]%</code> km/h.</dd>
 					</dl>
-					
-					<div class="expand">
-						<p class="model">Comment [ + ]</p>
-						<div class="comment">
-					 		<p class="note">change it to public transport or add public transport? - loris</p>
-					 		<p class="proposal">change, because only few people just walk to work and i think three compares a just fine, but seems like motorcycling is important in italy too - christopher</p>
-					 	</div>
-					</div>
-				
-					<p>[ Save data ]</p>
-				
-					<div class="expand">
-						<p class="model">Comment [ + ]</p>
-						<div class="comment">
-              				<p class="note">it can be something added later. Could be useful to let people share their information (you could get a unique URL for your data, for instance) - loris</p>
-						</div>
-					</div>
 					
 				</div>
 				
@@ -326,6 +271,7 @@
         			<li title="start" class="active"><a class="link" href="./index.html#start">Start</a></li>
         			<li title="details"><a class="link" href="./index.html#details">Calculation</a></li>
         			<li title="compare"><a class="link" href="./index.html#compare">Comparison</a></li>
+        			<li title="data"><a class="link" href="./index.html#data">Data</a></li>
         			<li title="appendix"><a class="link" href="./index.html#appendix">About</a></li>
         		</ul>
         	</div>
@@ -357,15 +303,24 @@
 					}
 				});
 				main.children().hide();
+				if (name.substring(1) == "data") { 
+					card = $("#compare");
+				}
 				card.show();
-				if (name.substring(1) == "compare") {
+				if (name.substring(1) == "data") {
 					card.children("div.front").show();
 					card.children("div.front").children().show();
 card.children("div.front").children("div.data").children("div.calc").hide();
 card.children("div.front").children("div.data").children(".fields").children("input").attr("style","");
 					card.children("div.action").show();
 		  			card.children("div.back").hide();
-		  		}  			  		
+		  		}
+		  		if (name.substring(1) == "compare") { 
+		  			card.children("div.front").hide();
+		  			card.children("div.action").hide();
+		  			card.children("div.back").show();
+		  			card.children("div.back").children().show();
+		  		}			  		
 		  	});
 		  	
 		  	var expand = $(".expand p");
