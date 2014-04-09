@@ -43,7 +43,7 @@
 				<div class="box">
 					<div class="action">
 						<p><a class="link" href="./index.html#details">[image of a car]</a></p>
-						<span><b>Mario has a speed of <code>%[mario.speed]%</code> km/h.</b></span>
+						<span><b><code>%[person.name]%</code> has a speed of <code>%[person.speed]%</code> km/h.</b></span>
 					</div>
 				</div>
 				
@@ -64,9 +64,9 @@
         
 				<div class="box">
 				 	<h3>Vehicle</h3>
-				 	<p>The person spends &euro; <code>%[calculated.vehicle.upkeeping]%</code> per year for the upkeeping of the <code>%[calculated.vehicle.type]%</code>.</p>
+				 	<p><code>%[person.name]%</code> spends &euro; <code>%[calculated.vehicle.upkeeping]%</code> per year for the upkeeping of the <code>%[calculated.vehicle.type]%</code>.</p>
 				 	<p>[ <code>if car:</code><br>
-				 	The person also spends &euro; <code>%[calculated.vehicle.spendings</code>]%  each year for fuel. ]</p>
+				 	<code>%[person.salute]%</code> also spends &euro; <code>%[calculated.vehicle.spendings</code>]%  each year for fuel. ]</p>
 				 	<p>And don&apos;t forget the vehicle itself, which costs &euro; <code>%[calculated.vehicle.costs]%</code> each year.</p>
 				 	<p>Thus the total expenses per year are &euro; <code>%[calculated.vehicle.total]%</code>.</p>
 				 	
@@ -84,7 +84,7 @@
 				<div class="box">
 				 	<h3>Time</h3>
 				 	<p>What do costs have to do with the speed?</p>
-				 	<p>Within a year, how much time does the person spend to travel?. We have to take into consideration not only the <code>%[calculated.time.way</code>]% hours on driving, but also the time the person has to work to afford the vehicle - <code>%[calculated.time.work]%</code> hours.</p>
+				 	<p>Within a year, how much time does <code>%[person.name]%</code> spend to travel?. We have to take into consideration not only the <code>%[calculated.time.way</code>]% hours on driving, but also the time <code>%[person.salute]%</code> has to work to afford the vehicle - <code>%[calculated.time.work]%</code> hours.</p>
 				 	<p>In total, it is therefore <code>%[calculated.time.total]%</code> hours.</p>
 				 	<p><a class="input" href="./index.html#time">[ Based On ]</a></p>
 				 	
@@ -162,12 +162,12 @@
 				 		
 				 		<p class="fields">
 				 			<label for="vehicle.insurance">Insurance: </label>
-				 			<input type="text" name="vehicle.insurance" value="vehicle.insurance"></input> &euro;<br>
+				 			<input type="text" name="vehicle.insurance" value="vehicle.insurance"></input> &euro; per year<br>
 							<label for="vehicle.tax">Tax: </label>
-							<input type="text" name="vehicle.tax" value="vehicle.tax"></input> &euro;<br>
+							<input type="text" name="vehicle.tax" value="vehicle.tax"></input> &euro; per year<br>
 							<label for="vehicle.maintenance">Maintenance: </label>
-							<input type="text" name="vehicle.maintenance" value="vehicle.maintenance"></input> &euro;<br>
-							<label for="vehicle.other">Other: </label><input type="text" name="vehicle.other" value="vehicle.other"></input> &euro;
+							<input type="text" name="vehicle.maintenance" value="vehicle.maintenance"></input> &euro; per year<br>
+							<label for="vehicle.other">Other: </label><input type="text" name="vehicle.other" value="vehicle.other"></input> &euro; per year
 						</p>
 						
 						<div class="calc" style="display: none;">
@@ -180,13 +180,13 @@
 				 		<h3>Time</h3>
 				 		<p class="fields">
 				 			<label for="time.hours">Work hours: </label>
-				 			<input type="text" name="time.hours" value="time.hours"></input> a day<br>
+				 			<input type="text" name="time.hours" value="time.hours"></input> hrs a day<br>
 				 			<label for="time.hours">Work days: </label>
-				 			<input type="text" name="time.days" value="time.days"></input> a year.
+				 			<input type="text" name="time.days" value="time.days"></input> days a year.
 				 		</p>
 				 		<p class="fields">
 				 			<label for="time.hours">Salary: </label>
-				 			<input type="text" name="time.salary" value="time.salary"></input> per year.
+				 			<input type="text" name="time.salary" value="time.salary"></input> &euro; per year.
 				 		</p>
 				 		
 				 		<div class="calc" style="display: none;">
@@ -208,13 +208,13 @@
 			
 					<dl>
 						<dt>Car:</dt>
-						<dd>Traveling by car the person has a speed of <code>%[calculated.car.speed]%</code> km/h. <a class="link" href="./index.html#details">[ Calculation ]</a></dd>
+						<dd>Traveling by car <code>%[person.name]%</code> has a speed of <code>%[calculated.car.speed]%</code> km/h. <a class="link" href="./index.html#details">[ Calculation ]</a></dd>
 				
 						<dt>Cycling:</dt>
-						<dd>Traveling the same way by bicycle the person has a speed of <code>%[calculated.bike.speed]%</code> km/h. <a class="link" href="./index.html#details">[ Calculation ]</a></dd>
+						<dd>Traveling the same way by bicycle <code>%[person.salute]%</code> has a speed of <code>%[calculated.bike.speed]%</code> km/h. <a class="link" href="./index.html#details">[ Calculation ]</a></dd>
 					
 						<dt>Public Transport:</dt>
-						<dd>Using the public transport the person has a speed of <code>%[calculated.public.speed]%</code> km/h.</dd>
+						<dd>Using the public transport <code>%[person.salute]%</code> has a speed of <code>%[calculated.public.speed]%</code> km/h.</dd>
 					</dl>
 					
 				</div>
