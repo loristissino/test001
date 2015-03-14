@@ -42,6 +42,12 @@
 			<div id="input" class="card">
 				<h2>Input</h2>
 				
+				<p class="expand">Comment [ + ]</p>
+				<div class="comment">
+				  <p class="proposal">design this view as a wizard, eg. split it apart in different panels? - christopher.<br>
+				 p.s.: the total arrangement (and order) of the views is still not settled - this is just an outline ... !.</p>
+				</div>
+				
 				<h3>Transport</h3>
 				
 				<p>You use your <code>%[select.transport.vehicle]%</code> to get to work.</p>
@@ -49,6 +55,11 @@
 				<h3>Way</h3>
 				
 				<p>Between leaving home and reaching the workplace <code>%[input.way.duration]%</code> minutes pass. The ride is <code>%[input.way.distance]%</code> kilometers. <a class="link" href="./index.html#appendix">[*]</a></p>
+				
+				<p class="expand">Comment [ + ]</p>
+				<div class="comment">
+				  <p class="proposal">the route, eg. the <code>input.way.distance</code> can be computed, with the help of a map to display, as already talked about. (this would be then the asked foreign apis.</p>
+				</div>
 				
 				<h3>Expenses</h3>
 
@@ -71,7 +82,7 @@
 				 <p class="proposal">You don't use your car only to get to work and this should be taken into account to the expenses - christopher</p>
 				</div>
 				
-				<p>if car/motorcycle: One liter of fuel costs &euro; <code>%[input.expenses.fuel]%</code>, and the vehicle consumes <code>%[input.transport.consumption]%</code> liter per 100 km</p>
+				<p><code>if car/motorcycle:</code> One liter of fuel costs &euro; <code>%[input.expenses.fuel]%</code>, and the vehicle consumes <code>%[input.transport.consumption]%</code> liter per 100 km</p>
 
 				<p class="expand">Comment [ + ]</p>
 				<div class="comment">
@@ -92,7 +103,7 @@
 				 <p class="note">regarding "hours of work": only few people will know how many hours they have to work a month or how many weeks a year. thus we have to offer default values or find another way to compute the hourly rate - christopher</p>
 			   </div> 
 			
-				<p><a class="link" href="./index.html#comparison">[ Compute ]</a></p>		
+				<p><a class="link" href="./index.html#comparison">[ Compare ]</a></p>		
 				
 			</div>
 			
@@ -123,7 +134,7 @@
 				
 				<p class="expand">Comment [ + ]</p>
 				<div class="comment">
-				  <p class="note">not sure about saving the data on the server, see also the wiki - christopher.</p>
+				  <p class="note">not sure about saving the data on the server (, but local storage possible, see sencha store) - christopher.</p>
 				</div>
 				
 			</div>
@@ -138,12 +149,12 @@
 				
 				<p class="expand">Comment [ + ]</p>
 				<div class="comment">
-					<p class="proposal">repeat the Input? - and how? - christopher</p>
+					<p class="proposal">repeat the input ... and how? - christopher</p>
 				</div>
 				
 				<h3>Way</h3>
 				
-				<p>The total path of the way to the workplace is <code>%[details.total.way]%</code> km per year [*].</p>
+				<p>The total path of the way to the workplace is <code>%[details.total.way]%</code> km per year <a class="link" href="./index.html#appendix">[*]</a>.</p>
 				
 				<p><del>We can calculate the <em>door-to-door</em> speed of in a very simple way, with the classic <em>space / time</em> formula: it is [! <code>OUT</code> !] km/h. [*]</del></p>
 				
@@ -186,6 +197,11 @@
 			<div id="appendix" class="card">
 				<h2>Appendix *</h2>
 				
+				<p class="expand">Comment [ + ]</p>
+				<div class="comment">
+				  <p class="proposal">This should contain explanations about the different parameters as well as a help section (and information about the makers ?) - christopher.</p>
+				</div>
+				
 			</div>
 		</div>
         <!-- end content  -->
@@ -194,10 +210,10 @@
            <div class="container">
         	<ul>
         		<li title="start" class="active"><a class="link" href="./index.html#start">Start</a></li>
-        		<li title="input"><a class="link" href="./index.html#input">Input</a></li>
-        		<li title="comparison"><a class="link" href="./index.html#comparison">Comparison</a></li>
-        		<li title="details"><a class="link" href="./index.html#details">Details</a></li>
-        		<li title="appendix"><a class="link" href="./index.html#appendix">Appendix</a></li>
+        		<li title="input"><a class="link" href="./index.html#input">Calculate</a></li>
+        		<li title="comparison"><a class="link" href="./index.html#comparison">Compare</a></li>
+        		<li title="details"><a class="link" href="./index.html#details">Compute</a></li>
+        		<li title="appendix"><a class="link" href="./index.html#appendix">About</a></li>
         	</ul>
         	</div>
          </div>
@@ -207,6 +223,19 @@
         <script src="./js/main.js"></script>
         <script>
          $(document).ready(function() {
+         	var example = "car";
+         	var json = './data/transport.json';
+         	var values = {};
+         	$.getJSON(json,  function(data) {
+         		$.each(data, function(i,x) {
+		  			if (i === example) {
+		  				name = i;
+		  				table = "transport";
+		  				values = x.transport;	
+		  			}
+         		});	
+         	}); 
+        
         	var link = $(".link");
 		  	link.click(function() {
 		  		var target = $(this).attr('href');
@@ -228,29 +257,20 @@
 		  		main.children().hide();
 		  		$(card).toggle();
 		  	});
+		  	
 		  	var comment = $(".expand");
 		  	comment.click(function () {
 				$(this).next("div.comment").toggle();
 		  	});
+		  	
 		  	var data = $("#data ul");
 		  	var button = $("#data button");
 		  	button.click(function () {
 		  		data.empty();
-		  		$.getJSON('./data/transport.json', function(e) {
-		  			$.each(e, function(i,x) {
-		  				if (i === "car") {
-		  					$.each(x, function(k,p) {
-		  						if (k === "transport") {
-		  							$.each(p, function(n,v) {
-		  								data.append($("<li>").append(k, ".", n, ": ").append(v));
-		  							});
-		  						}
-		  					});
-		  				}
-		  			});
+		  		$.each(values, function(key,value) {
+		  			data.append($("<li>").append(name, ".", table, ".", key, ": ").append(value));
 		  		});
-		  	});
-		  	
+		  	});	  	
 		 }); 	
         </script>
         
