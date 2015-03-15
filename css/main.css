@@ -135,6 +135,28 @@ textarea {
 	border: 1px solid #dddddd;
 }
 
+.panel {
+	margin: 1em;
+	padding: 2em;
+	text-align: center;
+}
+
+.tab {
+	width: 15em;
+	height: 15em;
+	border: 1px solid #eeeeee;
+	padding: 1em;
+	margin: 2em;
+}
+
+.tab.left {
+	float: left;
+}
+
+.tab.right {
+	float: right;
+}
+
 .expand {
 	color: #333333;
 	margin: 0;
@@ -189,7 +211,6 @@ code {
 #input, #comparison, #details, #appendix {
 	display: none;
 }
-
 
 /* ==========================================================================
    Helper classes
