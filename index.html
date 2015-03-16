@@ -64,10 +64,6 @@
 				<div class="comment">
 				  <p class="proposal">design this view as a wizard, eg. split it apart in different panels? - christopher.</p>
 				</div>
-				
-				<h3>Transport</h3>
-				
-				<p>You use your <code>%[select.transport.vehicle]%</code> to get to work.</p>
 
 				<h3>Way</h3>
 				
@@ -75,10 +71,34 @@
 				
 				<p class="expand">Comment [ + ]</p>
 				<div class="comment">
-				  <p class="proposal">the route, eg. the <code>input.way.distance</code> can be computed, with the help of a map to display, as already talked about. (this would be then the asked foreign apis.</p>
+				  <p class="proposal">the route, eg. the <code>input.way.distance</code> can be computed, with the help of a map to display, as already talked about. this would be then the asked foreign apis.</p>
 				</div>
 				
-				<h3>Expenses</h3>
+				<p>You will drive the route to work <code>%[input.way.times]%</code> times a day</p>
+				
+				<h3>Vehicle</h3>
+				
+				<p class="expand">Comment [ + ]</p>
+				<div class="comment">
+				  <p class="proposal">to find some &quot;simple&quot; names for the single parts/panels, see also start page - christopher.</p>
+				</div>
+				
+				<p>You use your <code>%[select.transport.vehicle]%</code> to get to work.</p>
+				
+				<p>The <code>%[select.transport.vehicle]%</code> was purchased for &euro; <code>%[input.transport.price]%</code>. You expect to be able to use it <code>%[input.transport.years]%</code> years.</p>
+				
+				<p>The <code>%[select.transport.vehicle]%</code> is used for <code>%[input.transport.usage]%</code> % private purposes.</p>
+				
+				<p class="expand">Comment [ + ]</p>
+				<div class="comment">
+				 	<p class="note">How would we take it in consideration? And what do you mean by "private purposes"? - loris</p>
+				 	<p class="proposal">You don't use your car only to get to work and this should be taken into account to the expenses - christopher</p>
+				</div>
+				
+				<h3>Money</h3>
+				
+				<p><code>if car/motorcycle:</code><br>
+				One liter of fuel costs &euro; <code>%[input.expenses.fuel]%</code>, and the vehicle consumes <code>%[input.transport.consumption]%</code> liter per 100 km</p>
 
 				<p>For a more significant computation, however, we must also consider the cost of the <code>%[select.transport.vehicle]%</code>. In one year you spend:</p>
 
@@ -89,18 +109,6 @@
 					<li>other expenses (tolls, parking, etc..): &euro; <code>%[input.expenses.other]%</code></li>
 				</ul>
 
-				<p>The <code>%[select.transport.vehicle]%</code> was purchased for &euro; <code>%[input.transport.price]%</code>. You expect to be able to use it <code>%[input.transport.years]%</code> years.</p>
-				
-				<p>The <code>%[select.transport.vehicle]%</code> is used for <code>%[input.transport.usage]%</code> % private purposes.</p>
-				
-				<p class="expand">Comment [ + ]</p>
-				<div class="comment">
-				 <p class="note">How would we take it in consideration? And what do you mean by "private purposes"? - loris</p>
-				 <p class="proposal">You don't use your car only to get to work and this should be taken into account to the expenses - christopher</p>
-				</div>
-				
-				<p><code>if car/motorcycle:</code> One liter of fuel costs &euro; <code>%[input.expenses.fuel]%</code>, and the vehicle consumes <code>%[input.transport.consumption]%</code> liter per 100 km</p>
-
 				<p class="expand">Comment [ + ]</p>
 				<div class="comment">
 				  <p class="note">We have to think about how to deal with different currencies, fuel prices, etc - loris</p>
@@ -108,8 +116,6 @@
 				</div>
 				
 				<h3>Time</h3>
-				
-				<p>You will drive the route to work <code>%[input.way.times]%</code> times a day</p>
 				
 				<p>You work <code>%[input.time.hours]%</code> hours a day, for <code>%[input.time.days]%</code> days per week and <code>%[input.time.weeks]%</code> weeks in a year.</p>
 				
@@ -177,16 +183,17 @@
 				
 				<p class="expand">Comment [ + ]</p>
 				 <div class="comment">
-				  <p class="note">why do we need the door-to-door-speed? - christopher)</p>
+				  <p class="note">why do we need the door-to-door-speed? - christopher</p>
         		  <p class="note">in my original version, the idea was to show that the speed is much lower than the one seen on one's speedometer, even if you don't consider the costs involved; you have to take a long way to bypass the city center, for instance, or you park your car quite far from your destination - loris</p>
                   <p class="proposal">that is what the whole app is about, isn't it? But these values are already given in input.way.duration & input.way.distance - christopher</p>
                 </div>
         
-				<h3>Expenses</h3>
+				<h3>Money</h3>
 				
 				<p>The person spends &euro; <code>%[details.expenses.upkeeping]%</code> per year for the upkeeping of the <code>%[details.transport.vehicle]%</code>.</p>
 				
-				<p>if car/motorcycle: She /he also spends &euro; <code>%[details.expenses.fuel</code>]%  each year for fuel.</p>
+				<p><code>if car/motorcycle:</code><br>
+				 She /he also spends &euro; <code>%[details.expenses.fuel</code>]%  each year for fuel.</p>
 				
 				<p>And don&apos;t forget the vehicle itself, which costs &euro; <code>%[details.expenses.vehicle]%</code> each year.</p>
 				
