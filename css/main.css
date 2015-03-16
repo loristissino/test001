@@ -136,25 +136,19 @@ textarea {
 }
 
 .panel {
+}
+
+.tab {
 	margin: 1em;
 	padding: 2em;
 	text-align: center;
 }
 
-.tab {
-	width: 15em;
-	height: 15em;
-	border: 1px solid #eeeeee;
+.action {
+	margin: 1em;
 	padding: 1em;
-	margin: 2em;
-}
-
-.tab.left {
-	float: left;
-}
-
-.tab.right {
-	float: right;
+	text-align: center;
+	border: 1px solid #333333;
 }
 
 .expand {
